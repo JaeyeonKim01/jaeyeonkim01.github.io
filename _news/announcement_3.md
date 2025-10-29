@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-09-01
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+I'm starting my Ph.D. at Harvard University, advised by Prof. Sitan Chen and Prof. Sham Kakade. I'm really thrilled to pursue my career path at Harvard University!
