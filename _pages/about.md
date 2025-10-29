@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello, my name is Jaeyeon Kim! I also go with Jay. I’m currently a second-year Ph.D. student at Harvard CS, advised by [Sitan Chen](https://sitanchen.com/) and [Sham Kakade](https://shamulent.github.io/). 
+Hello, my name is Jaeyeon Kim! I also go with Jay. I’m currently a second-year Ph.D. student at Harvard CS, advised by [Sitan Chen](https://sitanchen.com/) and [Sham Kakade](https://shamulent.github.io/).
 
 At Harvard, my research focuses on deepening our understanding of modern generative models and pioneering new paradigms for generative modeling. My recent work on [Masked Diffusion](https://arxiv.org/abs/2502.06768) received an Outstanding Paper Award at ICML!
 
