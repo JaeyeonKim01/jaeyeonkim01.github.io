@@ -14,7 +14,7 @@ I have been fortunate to work with many talented junior collaborators and mentee
 - [Brian Lee](https://brianlck.github.io/) (Jane Street): 2025, flexible-length discrete diffusions.
 - [Seunggeun Kim](https://seunggeunkimkr.github.io/) and [Taekyun Lee](https://taekyunl.github.io/) (UT Austin): 2025 --, inference-time algorithms for discrete diffusions.
 - [Jonathan Geuter](https://j-geuter.github.io/), Yuyuan Chen, and Franklin Wang (Harvard): 2025 --, discrete diffusion model training and reinforcement learning for generative models.
-- [Minji Lee](https://haewonc.github.io/): 2026 --.
+- [Minji Lee](https://haewonc.github.io/) (Columbia University): Generative models for protein design.
 - Woosang Jeon (SNU): 2026 --, reinforcement learning for generative models.
 - Woobin Park (SNU): 2026 --, diffusion model training.
 - Pranav Sitaraman and Gavin Ye (Harvard College): 2026 --, diffusion model inference.
