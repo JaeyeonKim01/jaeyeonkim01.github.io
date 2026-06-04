@@ -27,7 +27,7 @@ latest_posts:
 Hello, my name is Jaeyeon Kim! I also go with Jay. I’m currently a second-year Ph.D. student at Harvard CS, advised by [Sitan Chen](https://sitanchen.com/) and [Sham Kakade](https://shamulent.github.io/).
 I also closely work with [Michael Albergo](https://malbergo.me/) and [Yilun Du](https://yilundu.github.io/).
 
-At Harvard, my research focuses on deepening our understanding of modern generative models and pioneering new paradigms for generative modeling. My recent work on [Masked Diffusion](https://arxiv.org/abs/2502.06768) received an Outstanding Paper Award at ICML!
+At Harvard, my research focuses on deepening our understanding of modern generative models and developing new generative models for downstream domains. My recent work on [Masked Diffusion](https://arxiv.org/abs/2502.06768) received an Outstanding Paper Award at ICML!
 
 Previously, I earned a B.S. in Math at Seoul National University, where I worked in Optimization Theory with Professors [Ernest Ryu](https://ernestryu.com/publications.html) and [Asu Ozdaglar](https://en.wikipedia.org/wiki/Asuman_%C3%96zda%C4%9Flar). I got A+ in all math courses that I've taken!! Earlier in my academic journey, I was an IMO finalist in South Korea.
 

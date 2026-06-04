@@ -37,6 +37,13 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2026
+      title: Jump Trading Fellowship
+      linkitems:
+        - linkname: announcement
+          link: https://www.jumptrading.com/signals/announcing-the-2026-2027-jump-trading-fellows
+    - year: 2026
+      title: Kempner Fellowship
     - year: 2025
       title: Outstanding Paper Award, ICML 2025
       description: Awarded to the top 6 papers among 15,000 submissions
