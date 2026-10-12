@@ -74,13 +74,23 @@ function homeView() {
     </section>
   </div>
   <section class="background-section prose" aria-labelledby="background-heading"><h2 id="background-heading">Background</h2>${background}</section>
+  <section class="easter-egg-section prose" aria-labelledby="easter-egg-heading">
+    <h2 id="easter-egg-heading">Easter egg</h2>
+    <p>I use this LaTeX <code>xcolor</code> scheme in most of my first-authored papers. The models change; my favorite colors have tenure :) You can grab the <a href="assets/jay_colors_util.tex" download>color scheme here</a>.</p>
+    <ul class="palette-swatches" aria-label="A few favorites from my paper palette">
+      <li><span class="palette-swatch" style="background-color:#4169E1" aria-hidden="true"></span><code>xblue</code></li>
+      <li><span class="palette-swatch" style="background-color:#623E99" aria-hidden="true"></span><code>xxpurple</code></li>
+      <li><span class="palette-swatch" style="background-color:#009F86" aria-hidden="true"></span><code>xxgreen</code></li>
+      <li><span class="palette-swatch" style="background-color:#FF0000" aria-hidden="true"></span><code>xred</code></li>
+    </ul>
+  </section>
 `;
 }
 
 function researchView(params) {
   const topics = ['All work', 'Discrete diffusion', 'Generative modeling', 'Learning & optimization'];
   const active = topics.includes(params.get('topic')) ? params.get('topic') : 'All work';
-  return `<section class="page-heading"><h1>Research</h1><p>Generative models, discrete diffusion, and the mathematical principles behind learning.</p></section>
+  return `<section class="page-heading"><h1>Research</h1></section>
     <div class="research-controls"><div class="filter-tabs" role="group" aria-label="Filter publications by topic">${topics.map(topic => `<button type="button" class="filter-button ${topic === active ? 'active' : ''}" data-topic="${esc(topic)}" aria-pressed="${topic === active}">${esc(topic)}</button>`).join('')}</div>
     <div class="search-row"><label class="search-field"><input type="search" id="paper-search" placeholder="Search titles, authors, or venues…" aria-label="Search publications"></label><label class="year-field"><span class="sr-only">Publication year</span><select id="paper-year"><option value="all">All years</option>${[...new Set(data.papers.map(p => p.year))].map(year => `<option value="${year}">${year}</option>`).join('')}</select></label></div></div>
     <div class="result-bar"><span id="result-count" role="status"></span><span>* Equal contribution</span></div><div id="research-results" class="paper-list full-list"></div>`;
