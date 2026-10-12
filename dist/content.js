@@ -444,7 +444,7 @@ window.SITE_DATA = {
           "description": "One of eight Ph.D. students selected nationwide; full tuition and a $50,000 stipend.",
           "linkitems": [
             {
-              "linkname": "announcement",
+              "linkname": "Announcement",
               "link": "https://www.jumptrading.com/signals/announcing-the-2026-2027-jump-trading-fellows"
             }
           ]
@@ -531,7 +531,7 @@ window.SITE_DATA = {
         {
           "year": "Summer 2026",
           "title": "Engineering Intern, Autopilot team, Tesla AI",
-          "description": "Worked on text reasoning for self-driving models."
+          "description": "Worked on reasoning for self-driving models."
         },
         {
           "year": "2022–2024",

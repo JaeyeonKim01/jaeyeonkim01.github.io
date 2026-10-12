@@ -101,12 +101,18 @@ try {
   const pdf = await page.request.get(`${base}/assets/Jaeyeon_CV.pdf`);
   assert.equal(pdf.status(),200);
   assert((await pdf.body()).subarray(0,4).equals(Buffer.from('%PDF')));
+  const honors = page.locator('#section-2');
+  await honors.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  assert.equal(await honors.evaluate(el => el.open), false);
+  assert.equal(await honors.locator('.cv-section-body').isVisible(), false);
   await page.getByRole('link',{name:'Honors and Awards',exact:true}).click();
+  assert.equal(await honors.evaluate(el => el.open), true);
   await page.waitForTimeout(600);
   assert(await page.locator('#section-2').evaluate(el => Math.abs(el.getBoundingClientRect().top-24)<15));
   assert.match(await page.locator('.cv-sections').innerText(),/Ilju Scholarship/);
   assert.match(await page.locator('.cv-sections').innerText(),/Invited talk \(scheduled\)/);
-  checks.push('Collaboration, eight updated CV sections, CV jump links and replacement PDF');
+  checks.push('Collaboration, eight collapsible CV sections, keyboard toggles, jump links reopening sections, and replacement PDF');
 
   await page.setViewportSize({width:390,height:844});
   await page.goto(base,{waitUntil:'networkidle'});

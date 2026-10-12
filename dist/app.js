@@ -113,7 +113,7 @@ function collaborationView() {
 
 function cvView() {
   return `<section class="page-heading cv-heading"><div><h1>Curriculum vitae</h1><p>Jaeyeon Kim · Computer Science, Harvard University</p></div>${link('assets/Jaeyeon_CV.pdf','Download PDF','primary-link','download')}</section>
-    <div class="cv-layout"><nav class="cv-toc" aria-label="CV sections">${data.cv.map((section, i) => `<a href="#/cv/section-${i}" data-scroll="section-${i}">${esc(section.title)}</a>`).join('')}</nav><div class="cv-sections">${data.cv.map((section, i) => `<section id="section-${i}" class="cv-section"><h2>${esc(section.title)}</h2>${section.contents.map(item => section.type === 'map' ? `<dl class="cv-map"><dt>${esc(item.name)}</dt><dd>${esc(item.value)}</dd></dl>` : `<div class="cv-item"><div class="cv-year">${esc(item.year)}</div><div><h3>${esc(item.title)}</h3>${item.description ? (Array.isArray(item.description) ? `<ul>${item.description.map(line => `<li>${esc(line)}</li>`).join('')}</ul>` : `<p>${esc(item.description)}</p>`) : ''}${(item.linkitems || []).map(item => link(item.link, esc(item.linkname), 'text-link')).join('')}</div></div>`).join('')}</section>`).join('')}</div></div>`;
+    <div class="cv-layout"><nav class="cv-toc" aria-label="CV sections">${data.cv.map((section, i) => `<a href="#/cv/section-${i}" data-scroll="section-${i}">${esc(section.title)}</a>`).join('')}</nav><div class="cv-sections">${data.cv.map((section, i) => `<details id="section-${i}" class="cv-section" open><summary><h2>${esc(section.title)}</h2></summary><div class="cv-section-body">${section.contents.map(item => section.type === 'map' ? `<dl class="cv-map"><dt>${esc(item.name)}</dt><dd>${esc(item.value)}</dd></dl>` : `<div class="cv-item"><div class="cv-year">${esc(item.year)}</div><div><h3>${esc(item.title)}</h3>${item.description ? (Array.isArray(item.description) ? `<ul>${item.description.map(line => `<li>${esc(line)}</li>`).join('')}</ul>` : `<p>${esc(item.description)}</p>`) : ''}${(item.linkitems || []).map(item => link(item.link, esc(item.linkname), 'text-link')).join('')}</div></div>`).join('')}</div></details>`).join('')}</div></div>`;
 }
 
 function renderPage() {
@@ -132,7 +132,11 @@ function renderPage() {
   });
   if (route === 'research') updatePapers();
   const sectionId = route === 'cv' ? path.split('/')[2] : null;
-  if (sectionId) document.getElementById(sectionId)?.scrollIntoView();
+  if (sectionId) {
+    const target = document.getElementById(sectionId);
+    if (target?.matches('details')) target.open = true;
+    target?.scrollIntoView();
+  }
   else window.scrollTo(0, 0);
 }
 
@@ -156,6 +160,7 @@ main.addEventListener('click', event => {
   if (scrollLink) {
     event.preventDefault();
     const target = document.getElementById(scrollLink.dataset.scroll);
+    if (target?.matches('details')) target.open = true;
     target?.scrollIntoView();
   }
 });
