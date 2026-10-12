@@ -89,6 +89,12 @@ main:focus { outline: none; }
 .cv-layout { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 35px; }
 .cv-toc { display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
 .cv-section { border-top: 1px solid var(--border); padding-block: 20px; }
+.cv-section > summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; }
+.cv-section > summary::-webkit-details-marker { display: none; }
+.cv-section > summary::before { content: '▸'; color: var(--muted); font-size: 18px; }
+.cv-section[open] > summary::before { transform: rotate(90deg); }
+.cv-section > summary h2 { margin: 0; }
+.cv-section[open] > summary { margin-bottom: 18px; }
 .cv-map, .cv-item { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; font-size: 14px; }
 .cv-map dt, .cv-year { color: var(--muted); }
 .cv-map dd { margin: 0; }
