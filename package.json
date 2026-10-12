@@ -1,25 +1,15 @@
 {
-  "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "^1.4.0",
-    "prettier": "^3.1.1"
-  },
-  "name": "al-folio",
-  "version": "1.0.0",
-  "description": "<div align=\"center\">",
-  "main": "purgecss.config.js",
+  "name": "jay-homepage-preview",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node --check dist/app.js && node --check scripts/serve.mjs",
+    "test": "node scripts/check-browser.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaeyeonkim01/jaeyeonkim01.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/jaeyeonkim01/jaeyeonkim01.github.io/issues"
-  },
-  "homepage": "https://github.com/jaeyeonkim01/jaeyeonkim01.github.io#readme"
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
 }
