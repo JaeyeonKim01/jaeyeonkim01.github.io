@@ -1,4 +1,4 @@
-:root { color-scheme: light; --text: #222; --muted: #666; --border: #ddd; --accent: #245b96; --publication-accent: #b30000; --publication-hover: #850000; --publication-tint: #fff0f0; --publication-border: #efd6d6; --social-accent: #007d69; --xxgreen: #009f86; }
+:root { color-scheme: light; --text: #222; --muted: #666; --border: #ddd; --accent: #245b96; --publication-accent: #b30000; --publication-hover: #850000; --publication-tint: #fff0f0; --publication-border: #efd6d6; --social-accent: #007d69; --xred: #ff0000; --xxgreen: #009f86; }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 24px; }
 body { margin: 0; background: #fff; color: var(--text); font: 300 16px/1.65 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
@@ -28,6 +28,7 @@ main:focus { outline: none; }
 .hero h1 { margin-bottom: 24px; }
 .intro { line-height: 1.55; }
 .intro p { margin-bottom: 16px; }
+.coloredhl-xred { color: var(--xred); background: #ffe6e6; padding: 0.08em 0.2em; border-radius: 2px; font-weight: 400; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .hero .social-links { clear: both; }
 .prose a, .news-list a { text-decoration: underline; text-underline-offset: 3px; }
 .social-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; font-size: 14px; }
