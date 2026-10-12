@@ -6,7 +6,11 @@ Personal website at https://jaeyeonkim01.github.io/, migrated from al-folio to t
 
 The published site is entirely in `dist/`. Edit `dist/content.js` for biography, publications, news, collaborators, and CV; `dist/app.js` for page structure and hash routes; and `dist/styles.css` for appearance. Assets and font licenses are in `dist/assets/`.
 
+The homepage’s Easter egg shares the paper palette as `dist/assets/jay_colors_util.tex`.
+
 Run `npm run dev` and open http://localhost:5173. The preview server uses Node’s standard library and needs no package installation. Use `PORT=5174 npm run dev` if needed. VS Code can forward the port for a remote preview.
+
+For ongoing homepage edits, keep the local preview running so changes reload immediately. In VS Code, forward port **5173**, then open its local address in **Browser: Open Integrated Browser** or **Simple Browser: Show**. The workspace labels this port “Jay homepage preview” and opens it as a preview when automatically forwarded. **Tasks: Run Task → Preview homepage** can restart the server.
 
 Run `npm run check` for JavaScript syntax checks. For browser checks, run `npm ci`, start the preview server, and run `npm test`. `CHROMIUM_PATH` and `PREVIEW_URL` can override the browser and server defaults. Screenshots and results are written to `qa/`.
 

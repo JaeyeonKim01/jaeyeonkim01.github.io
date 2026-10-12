@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Preview homepage",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "homepage-preview",
+        "pattern": { "regexp": "^PREVIEW_ERROR (.*): (.*)$", "file": 1, "message": 2 },
+        "background": { "activeOnStart": true, "beginsPattern": "^>.*dev", "endsPattern": "^Local preview ready:" }
+      },
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

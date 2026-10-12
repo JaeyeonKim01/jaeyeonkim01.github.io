@@ -1,0 +1,49 @@
+\definecolor{xblue}{HTML}{4169E1}
+\definecolor{xgreen}{HTML}{036C3A}
+\definecolor{xpurple}{HTML}{9838B1}
+\definecolor{xslategray}{HTML}{70818F}
+\definecolor{xorange}{HTML}{FF8C00}
+\definecolor{xcyan}{HTML}{06AEEF}
+\definecolor{xred}{HTML}{FF0000}
+\definecolor{xgray}{HTML}{808080}
+\definecolor{xxgreen}{HTML}{009F86}
+\definecolor{xsienna}{HTML}{8B4512}
+\definecolor{xxpurple}{HTML}{623E99}
+\newcommand{\xblue}[1]{\textcolor{xblue}{#1}}
+\newcommand{\xgreen}[1]{\textcolor{xgreen}{#1}}
+\newcommand{\xpurple}[1]{\textcolor{xpurple}{#1}}
+\newcommand{\xsienna}[1]{\textcolor{xsienna}{#1}}
+\newcommand{\xslategray}[1]{\textcolor{xslategray}{#1}}
+\newcommand{\xxpurple}[1]{\textcolor{xxpurple}{#1}}
+\newcommand{\xxgreen}[1]{\textcolor{xxgreen}{#1}}
+\newcommand{\xred}[1]{\textcolor{xred}{#1}}
+\newcommand{\coloredhl}[2]{{\textcolor{#1}{\sethlcolor{#1!10}\hl{#2}}}\xspace}
+\newcommand{\coloredul}[2]{\textcolor{#1}{\underline{#2}}\xspace}
+\newcommand{\coloreddashul}[2]{\textcolor{#1}{\dashuline{#2}}\xspace}
+\newcommand{\placeholdertext}[1]{\xslategray{\lipsum[1][1-#1]}}
+\definecolor{ablation1}{HTML}{EEEAF7}
+\definecolor{ablation2}{HTML}{E8F0F8}
+\definecolor{ablation3}{HTML}{E5F4F1}
+
+\newcommand{\ablationhl}[2]{{\setlength{\fboxsep}{0.5pt}\colorbox{#1}{#2}}}
+ \colorlet{tableHighlight}{xsienna!15}
+\newcommand{\tablecolor}[1]{\rowcolor{#1}}
+\tcbuselibrary{skins}
+\newcommand{\mybox}[2][xblue]{%
+    \begin{tcolorbox}[
+        enhanced,
+        colback=#1!5!white,
+        frame hidden,
+        boxrule=0pt,
+        borderline west={2.5pt}{0pt}{#1},
+        sharp corners,
+        boxsep=0pt,
+        left=8pt, right=8pt,
+        top=6pt, bottom=6pt,
+        before skip=7pt, after skip=7pt,
+        fontupper=\normalsize,
+        before upper={\colorlet{boxaccent}{#1}}
+    ]
+    #2
+    \end{tcolorbox}%
+}
