@@ -96,7 +96,8 @@ try {
     await noOverflow(`Desktop ${route}`);
     await screenshot(`${route}-desktop`);
   }
-  assert.equal(await page.locator('.cv-section').count(),8);
+  assert.equal(await page.locator('.cv-section').count(),7);
+  assert.equal(await page.locator('.cv-toc a').filter({hasText:/^Languages$/}).count(),0);
   assert.equal(await page.locator('.cv-section h2').filter({hasText:/^Publications$/}).count(),0);
   const pdf = await page.request.get(`${base}/assets/Jaeyeon_CV.pdf`);
   assert.equal(pdf.status(),200);
@@ -112,7 +113,7 @@ try {
   assert(await page.locator('#section-2').evaluate(el => Math.abs(el.getBoundingClientRect().top-24)<15));
   assert.match(await page.locator('.cv-sections').innerText(),/Ilju Scholarship/);
   assert.match(await page.locator('.cv-sections').innerText(),/Invited talk \(scheduled\)/);
-  checks.push('Collaboration, eight collapsible CV sections, keyboard toggles, jump links reopening sections, and replacement PDF');
+  checks.push('Collaboration, seven collapsible CV sections, keyboard toggles, jump links reopening sections, and replacement PDF');
 
   await page.setViewportSize({width:390,height:844});
   await page.goto(base,{waitUntil:'networkidle'});

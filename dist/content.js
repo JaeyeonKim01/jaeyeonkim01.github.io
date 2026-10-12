@@ -584,20 +584,6 @@ window.SITE_DATA = {
           "title": "Vice President of the Student Association in the Department of Mathematics, Seoul National University"
         }
       ]
-    },
-    {
-      "title": "Languages",
-      "type": "map",
-      "contents": [
-        {
-          "name": "English",
-          "value": "Fluent"
-        },
-        {
-          "name": "Korean",
-          "value": "Native"
-        }
-      ]
     }
   ],
   "collaborationHtml": "<p>I have been fortunate to work with many talented junior collaborators and mentees, and I have learned a great deal from them!</p>\n<h2>Current Collaborators</h2>\n<ul>\n<li><a href=\"https://yuyuanchen0.github.io/\">Yuyuan Chen</a></li>\n<li><a href=\"https://haewonc.github.io/\">Minji Lee</a></li>\n<li><a href=\"https://jihwankim8.github.io/\">Jiwhan Kim</a></li>\n<li>David Ko</li>\n<li>Kwonhee Moon</li>\n<li>Kenneth Pan</li>\n<li>Pranav Sitaraman</li>\n</ul>\n<h2>Past Collaborators</h2>\n<ul>\n<li><a href=\"https://parkwbin.github.io/\">Woobin Park</a>: 2026, diffusion model training.</li>\n<li>Yunghee Lee: 2026.</li>\n<li><a href=\"https://kiwhan.dev/\">Kiwhan Song</a>: 2025, diffusion models.</li>\n<li><a href=\"https://junsukim.notion.site/\">Junsu Kim</a>: 2025, convergence analysis for LoRA.</li>\n<li><a href=\"https://brianlck.github.io/\">Brian Lee</a>: 2025, flexible-length discrete diffusions.</li>\n<li><a href=\"https://seunggeunkimkr.github.io/\">Seunggeun Kim</a> and <a href=\"https://taekyunl.github.io/\">Taekyun Lee</a>: 2025--2026, inference-time algorithms for discrete diffusions.</li>\n<li><a href=\"https://j-geuter.github.io/\">Jonathan Geuter</a>: 2026, discrete diffusion model training.</li>\n<li>Woosang Jeon: 2026, reinforcement learning for generative models.</li>\n<li>Gavin Ye: 2026, diffusion model inference.</li>\n</ul>\n<p>These collaborations have taken the form of either close research partnerships or mentoring relationships. In all cases, I aim to stay deeply involved in each project, at a co-first-author level of contribution!</p>\n<p>Due to limited capacity, I do not have dedicated mentoring spots available for the Fall 2026 semester, but I expect to have one or two openings beginning in Spring 2027. If you are interested in generative modeling for scientific domains or in developing a deep understanding of generative modeling, please feel free to email me at <a href=\"mailto:jaeyeon_kim@g.harvard.edu\">jaeyeon_kim@g.harvard.edu</a>.</p>",
