@@ -61,6 +61,7 @@ try {
   checks.push('Home: profile, six selected publications, five news items, portrait');
 
   await page.locator('#main-nav a[data-route="research"]').click();
+  await page.locator('main[data-page="research"]').waitFor();
   assert.equal(await page.locator('.paper-row').count(),18);
   const papers = await page.evaluate(() => window.SITE_DATA.papers);
   assert.equal(new Set(papers.map(paper => paper.id)).size, papers.length);
@@ -112,6 +113,7 @@ try {
   await noOverflow('Mobile home');
   await screenshot('home-mobile');
   await page.locator('#main-nav a[data-route="research"]').click();
+  await page.locator('main[data-page="research"]').waitFor();
   assert.equal(await page.locator('.paper-row').count(),18);
   await noOverflow('Mobile research');
   await screenshot('research-mobile');
