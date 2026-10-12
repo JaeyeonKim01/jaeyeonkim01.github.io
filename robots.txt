@@ -1,4 +1,2 @@
 User-agent: *
-Disallow:
-
-Sitemap: https://jaeyeonkim01.github.io/sitemap.xml
+Allow: /

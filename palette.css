@@ -1,0 +1,17 @@
+/* Exact colors from the submission jay_colors_util.tex. */
+:root {
+  --xblue: #4169E1;
+  --xgreen: #036C3A;
+  --xpurple: #9838B1;
+  --xslategray: #70818F;
+  --xorange: #FF8C00;
+  --xcyan: #06AEEF;
+  --xred: #FF0000;
+  --xgray: #808080;
+  --xxgreen: #009F86;
+  --xsienna: #8B4512;
+  --xxpurple: #623E99;
+  --ablation1: #EEEAF7;
+  --ablation2: #E8F0F8;
+  --ablation3: #E5F4F1;
+}
