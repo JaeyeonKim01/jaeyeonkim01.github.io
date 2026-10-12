@@ -219,6 +219,26 @@ window.SITE_DATA = {
       "venueShort": "ICLR"
     },
     {
+      "id": "beaudouin2025delta",
+      "title": "Delta Velocity Rectified Flow for Text-to-Image Editing",
+      "author": "Beaudouin, Gaspard and Li, Minghan and Kim, Jaeyeon and Yoon, Sung-Hoon and Wang, Mengyu",
+      "journal": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2026,
+      "preview": "assets/papers/dvrf.png",
+      "paper": "https://arxiv.org/abs/2509.05342",
+      "selected": false,
+      "authors": [
+        "Gaspard Beaudouin",
+        "Minghan Li",
+        "Jaeyeon Kim",
+        "Sung-Hoon Yoon",
+        "Mengyu Wang"
+      ],
+      "topic": "Generative modeling",
+      "award": "",
+      "venueShort": "CVPR"
+    },
+    {
       "id": "song2025selective",
       "title": "Selective Underfitting in Diffusion Models",
       "author": "Song*, Kiwhan and Kim*, Jaeyeon and Chen, Sitan and Du, Yilun and Kakade, Sham and Sitzmann, Vincent",
@@ -277,26 +297,6 @@ window.SITE_DATA = {
       "topic": "Learning & optimization",
       "award": "",
       "venueShort": "ICML · Oral"
-    },
-    {
-      "id": "beaudouin2025delta",
-      "title": "Delta Velocity Rectified Flow for Text-to-Image Editing",
-      "author": "Beaudouin, Gaspard and Li, Minghan and Kim, Jaeyeon and Yoon, Sung-Hoon and Wang, Mengyu",
-      "journal": "preprint",
-      "year": 2025,
-      "preview": "assets/papers/dvrf.png",
-      "paper": "https://arxiv.org/abs/2509.05342",
-      "selected": false,
-      "authors": [
-        "Gaspard Beaudouin",
-        "Minghan Li",
-        "Jaeyeon Kim",
-        "Sung-Hoon Yoon",
-        "Mengyu Wang"
-      ],
-      "topic": "Generative modeling",
-      "award": "",
-      "venueShort": "Preprint"
     },
     {
       "id": "kim2024task",
