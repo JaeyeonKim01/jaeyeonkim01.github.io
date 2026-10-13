@@ -79,12 +79,24 @@
   },
   {
     "number": 14,
+    "author": "Cuturi (2013)",
+    "url": "https://arxiv.org/abs/1306.0895",
+    "title": "Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances"
+  },
+  {
+    "number": 15,
+    "author": "Gretton et al. (2012)",
+    "url": "https://jmlr.org/papers/v13/gretton12a.html",
+    "title": "A Kernel Two-Sample Test"
+  },
+  {
+    "number": 16,
     "author": "Singh et al. (2026)",
     "url": "https://arxiv.org/abs/2605.18324",
     "title": "Improved Baselines with Representation Autoencoders"
   },
   {
-    "number": 15,
+    "number": 17,
     "author": "Yang et al. (2026)",
     "url": "https://arxiv.org/abs/2604.28190",
     "title": "Representation Fréchet Loss for Visual Generation"

@@ -26,17 +26,34 @@
 <p>The noise level is fixed throughout this instantiation. Therefore, the Priming Model does not learn a family of denoising steps or a time-dependent flow matching trajectory.</p>
 <p>For our ImageNet experiments, we also add a perceptual loss that matches reconstructed and clean images in LPIPS and ConvNeXt feature spaces.</p>
 <h3>Distributional post-training</h3>
-<p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Given a frozen feature encoder \(\phi\), we match the distributions of generated and real features:</p>
+<p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Since the model has not been trained on pure noise during this pretraining stage, its initial samples are still noisy (Figure 1, right, in our paper). Nevertheless, the pretrained network provides a strong initialization for subsequent distributional training.</p>
+<p>Given a frozen feature encoder \(\phi\), we match the distributions of generated and real features:</p>
 <div class="blog-equation" role="group" aria-label="Feature-space distributional post-training">
 \[
-\begin{aligned}
-\mathcal{L}_{\mathrm{post}}(\theta)&=\mathcal{F}(\phi_{\#}q_\theta,\phi_{\#}p_{\mathrm{data}}),\\
-\mathcal{F}(a,b)&=\mathcal{D}(a,b)-\mathcal{D}(a,\mathrm{sg}[a]).
-\end{aligned}
+\mathcal{L}_{\mathrm{post}}(\theta)=\mathcal{F}(\phi_{\#}q_\theta,\phi_{\#}p_{\mathrm{data}}).
 \]
 </div>
-<p>The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through φ, and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features. The second provides a repulsive self-interaction among generated samples.</p>
-<p>Our main choice of \(\mathcal{D}\) is an optimal transport cost. For each minibatch, we compute an entropy-regularized transport plan between generated and real features using Sinkhorn iterations, then backpropagate the transport cost through the frozen encoder and generator. On ImageNet, we combine sharper and smoother transport costs, with regularization strengths 0.001 and 0.01 and weights 0.75 and 0.25.</p>
+<p>For \(\mathcal{F}\), we use well-established distributional losses, such as Sinkhorn divergence <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-14" data-scroll="ref-14">[14]</a> and maximum mean discrepancy (MMD) <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-15" data-scroll="ref-15">[15]</a>. As a surrogate for these losses, we consider the following formulation:</p>
+<div class="blog-equation" role="group" aria-label="Distributional loss surrogate">
+\[
+\mathcal{F}(a,b)=\mathcal{D}(a,b)-\mathcal{D}(a,\mathrm{sg}[a]).
+\]
+</div>
+<p>Here, \(a=\phi_{\#}q_\theta\) and \(b=\phi_{\#}p_{\mathrm{data}}\) denote the distributions of generated and real features, respectively. The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through \(\phi\), and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features; the second provides a repulsive self-interaction among generated samples.</p>
+<p>Different choices of \(\mathcal{D}\) give different distributional surrogates. Our main choice is an entropy-regularized optimal transport cost, \(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\), yielding a surrogate for Sinkhorn divergence.</p>
+<p>A negative Laplacian-kernel similarity instead yields a surrogate for squared MMD:</p>
+<div class="blog-equation" role="group" aria-label="Negative Laplacian-kernel similarity">
+\[
+\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}\!\left[-\exp\!\left(-\|x-y\|_2\right)\right].
+\]
+</div>
+<p>We find that even the simpler mean pairwise distance is effective in our experiments:</p>
+<div class="blog-equation" role="group" aria-label="Mean pairwise feature distance">
+\[
+\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}\!\left[\|x-y\|_2\right].
+\]
+</div>
+<p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
 <p>The main recipe requires neither a prescribed diffusion trajectory nor a pretrained generative teacher. It does use pretrained feature encoders, whose role is to provide the representation spaces in which we compare distributions.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
 
@@ -67,7 +84,7 @@
 
 <h2 id="flexibility">Flexibility of both training stages</h2>
 <p>The framework is not tied to one corruption or one distributional loss. What matters is the sequence: learn a related reconstruction capability, then optimize the generated distribution.</p>
-<p><strong>Alternative pretraining.</strong> Replacing 80% of image patches with Gaussian noise and reconstructing the image reaches FID 1.87 after 160 pretraining epochs and 12,500 post-training updates. We also recover clean-image representations from a frozen RAEv2 <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-14" data-scroll="ref-14">[14]</a> encoder and compose the student with its frozen decoder. This variant reaches FID 2.34 after 12,500 post-training updates. The representation-based variant uses a pretrained representation teacher; it is an optional alternative to the main pixel-space recipe.</p>
+<p><strong>Alternative pretraining.</strong> Replacing 80% of image patches with Gaussian noise and reconstructing the image reaches FID 1.87 after 160 pretraining epochs and 12,500 post-training updates. We also recover clean-image representations from a frozen RAEv2 <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-16" data-scroll="ref-16">[16]</a> encoder and compose the student with its frozen decoder. This variant reaches FID 2.34 after 12,500 post-training updates. The representation-based variant uses a pretrained representation teacher; it is an optional alternative to the main pixel-space recipe.</p>
 <p><strong>Alternative distributional objectives.</strong> Starting from the same perceptually pretrained Priming-B-160 checkpoint, we replace OT with a mean pairwise-distance objective or a negative Laplacian-kernel surrogate. At 25,000 updates, they achieve FIDs of 1.95 and 1.85, respectively, compared with 1.38 for OT. Thus, multiple distributional losses work, with OT yielding the best FID among these choices.</p>
 <p><strong>Alternative feature spaces.</strong> Replacing ResNet-MAE and ConvNeXt with SigLIP, ViT-MAE, and Inception-V3 yields FID 1.65 and FDr⁵ 6.13 after 25,000 updates. The latter score improves on the reference, but these encoders also contribute to FDr⁵, so that improvement is not independent held-out-feature evidence.</p>
 <div class="blog-table" role="region" aria-label="ImageNet training-design alternatives" tabindex="0"><table><caption>ImageNet alternatives reported in the paper</caption><thead><tr><th scope="col">Configuration</th><th scope="col">FID ↓</th><th scope="col">Post-training updates</th></tr></thead><tbody>
@@ -80,7 +97,7 @@
 <tr><th scope="row">SigLIP / MAE / Inception features</th><td>1.65</td><td>25,000</td></tr>
 </tbody></table></div>
 <p class="blog-note">Masking and RAE use a shorter post-training horizon; the table demonstrates viable alternatives, not a comparison at identical training budgets.</p>
-<p>The noise level also matters. At a matched 12,500-update budget, our default \(s=0.8\) reaches FID 1.65, while pretraining entirely on pure noise (\(s=1.0\)) reaches 65.08. This supports the intuition that pretraining should retain enough clean-image information for reconstruction while remaining close to the generator’s eventual noise inputs. We also apply FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-15" data-scroll="ref-15">[15]</a> as another distributional post-training objective in the paper’s appendix.</p>
+<p>The noise level also matters. At a matched 12,500-update budget, our default \(s=0.8\) reaches FID 1.65, while pretraining entirely on pure noise (\(s=1.0\)) reaches 65.08. This supports the intuition that pretraining should retain enough clean-image information for reconstruction while remaining close to the generator’s eventual noise inputs. We also apply FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-17" data-scroll="ref-17">[17]</a> as another distributional post-training objective in the paper’s appendix.</p>
 <!-- Figure planned: pretraining and post-training ablations. -->
 
 <h2 id="results">Results across three domains</h2>
@@ -96,7 +113,7 @@
 <tr class="blog-result"><th scope="row">Priming-L, 160 epochs</th><td><strong>1.19</strong></td><td><strong>7.10</strong></td><td>238.95</td></tr>
 </tbody></table></div>
 <p>Priming-L-160 achieves FID 1.19 at 238.95 EFLOPs, compared with Drifting-L’s 1.61 at 1,476.39 EFLOPs: approximately 6.2× less training compute. Priming-B-80 achieves FID 1.47 with approximately 12.2× less compute than Drifting-B. These costs include both training stages and feature-encoder computations; they are compute ratios, not wall-clock speedups.</p>
-<p class="blog-note">The headline scores are means over three independent 50,000-image sampling draws from each fixed trained checkpoint, not three independent training runs. FDr⁵ averages normalized Fréchet distances in five evaluation feature spaces. This comparison follows the paper’s baseline set and excludes configurations explicitly optimized against Inception Fréchet distance, such as the 0.72-FID model reported by FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-15" data-scroll="ref-15">[15]</a>.</p>
+<p class="blog-note">The headline scores are means over three independent 50,000-image sampling draws from each fixed trained checkpoint, not three independent training runs. FDr⁵ averages normalized Fréchet distances in five evaluation feature spaces. This comparison follows the paper’s baseline set and excludes configurations explicitly optimized against Inception Fréchet distance, such as the 0.72-FID model reported by FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-17" data-scroll="ref-17">[17]</a>.</p>
 <!-- Figure planned: ImageNet quality–compute frontier. -->
 <h3>Text-to-image generation</h3>
 <p>At 512 × 512 resolution, we use the same 258M-parameter MM-JiT-B/16 backbone as the MiniT2I MeanFlow baseline, with a frozen FLAN-T5-Large text encoder. Our logit-normal pretraining variant uses 290,000 reconstruction updates followed by 4,000 distributional post-training updates.</p>
@@ -117,6 +134,7 @@
 <p>Several questions remain. Priming Models still rely on pretrained feature encoders. The connection between reconstruction and Jacobian alignment deserves a deeper explanation, and closing the remaining gap with strong multistep models remains important. We hope this work opens the door to simpler and more scalable ways to train one-step generators.</p>
 
 
+
 <h2 id="references">References</h2>
 <ol class="blog-references">
 <li id="ref-1" tabindex="-1">Song et al. (2023). <a href="https://arxiv.org/abs/2303.01469">Consistency Models</a>.</li>
@@ -132,6 +150,8 @@
 <li id="ref-11" tabindex="-1">Mescheder, Geiger, and Nowozin (2018). <a href="https://arxiv.org/abs/1801.04406">Which Training Methods for GANs do actually Converge?</a>.</li>
 <li id="ref-12" tabindex="-1">Deng et al. (2026). <a href="https://arxiv.org/abs/2602.04770">Generative Modeling via Drifting</a>.</li>
 <li id="ref-13" tabindex="-1">Han et al. (2026). <a href="https://arxiv.org/abs/2605.11755">One-Step Generative Modeling via Wasserstein Gradient Flows</a>.</li>
-<li id="ref-14" tabindex="-1">Singh et al. (2026). <a href="https://arxiv.org/abs/2605.18324">Improved Baselines with Representation Autoencoders</a>.</li>
-<li id="ref-15" tabindex="-1">Yang et al. (2026). <a href="https://arxiv.org/abs/2604.28190">Representation Fréchet Loss for Visual Generation</a>.</li>
+<li id="ref-14" tabindex="-1">Cuturi (2013). <a href="https://arxiv.org/abs/1306.0895">Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances</a>.</li>
+<li id="ref-15" tabindex="-1">Gretton et al. (2012). <a href="https://jmlr.org/papers/v13/gretton12a.html">A Kernel Two-Sample Test</a>.</li>
+<li id="ref-16" tabindex="-1">Singh et al. (2026). <a href="https://arxiv.org/abs/2605.18324">Improved Baselines with Representation Autoencoders</a>.</li>
+<li id="ref-17" tabindex="-1">Yang et al. (2026). <a href="https://arxiv.org/abs/2604.28190">Representation Fréchet Loss for Visual Generation</a>.</li>
 </ol>
