@@ -151,7 +151,7 @@ main:focus { outline: none; }
 .blog-post { max-width: 1080px; margin-inline: auto; }
 .blog-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 36px; align-items: start; }
 .blog-post > .page-heading { margin-left: 226px; }
-.blog-body { font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
+.blog-body { min-width: 0; font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
 .blog-body h2 { margin: 38px 0 18px; }
 .blog-body h3 { margin: 28px 0 14px; font-size: 18px; font-weight: 600; }
 .blog-lead { font-size: 17px; }
@@ -182,7 +182,7 @@ main:focus { outline: none; }
 .blog-references { padding-left: 24px; font-size: 14px; }
 .blog-references li { margin-bottom: 14px; }
 @media (max-width: 850px) {
-  .blog-layout { grid-template-columns: 1fr; gap: 24px; }
+  .blog-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .blog-post > .page-heading { margin-left: 0; }
   .blog-toc { position: static; }
 }

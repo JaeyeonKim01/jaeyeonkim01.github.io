@@ -24,7 +24,7 @@
 \]
 </div>
 <p>The noise level is fixed throughout this instantiation. Therefore, the Priming Model does not learn a family of denoising steps or a time-dependent flow matching trajectory.</p>
-<p>We also add a perceptual loss that matches reconstructed and clean images in LPIPS and ConvNeXt feature spaces.</p>
+<p>For our ImageNet experiments, we also add a perceptual loss that matches reconstructed and clean images in LPIPS and ConvNeXt feature spaces.</p>
 <h3>Distributional post-training</h3>
 <p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Given a frozen feature encoder \(\phi\), we match the distributions of generated and real features:</p>
 <div class="blog-equation" role="group" aria-label="Feature-space distributional post-training">
