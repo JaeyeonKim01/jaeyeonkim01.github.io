@@ -40,9 +40,12 @@
 \]
 </div>
 <p>Here, \(a=\phi_{\#}q_\theta\) and \(b=\phi_{\#}p_{\mathrm{data}}\) denote the distributions of generated and real features, respectively. The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through \(\phi\), and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features; the second provides a repulsive self-interaction among generated samples.</p>
-<p>Different choices of \(\mathcal{D}\) give different distributional surrogates. Our main choice is an entropy-regularized optimal transport cost, \(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\), yielding a surrogate for Sinkhorn divergence.</p>
-<p>A negative Laplacian-kernel similarity, \(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[-\exp(-\|x-y\|_2)]\), instead yields a surrogate for squared MMD.</p>
-<p>We find that even the simpler mean pairwise distance, \(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\), is effective in our experiments.</p>
+<p>Different choices of \(\mathcal{D}\) lead to different objectives \(\mathcal{F}\):</p>
+<ul class="blog-loss-choices">
+<li><strong>Optimal transport.</strong> With <mark class="coloredhl-xblue">\(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\)</mark>, an entropy-regularized transport cost, \(\mathcal{F}\) becomes a surrogate for <strong>Sinkhorn divergence</strong>. This is our main choice.</li>
+<li><strong>Laplacian kernel.</strong> With <mark class="coloredhl-xxpurple">\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[-\exp(-\|x-y\|_2)]\)</mark>, a negative kernel similarity, \(\mathcal{F}\) becomes a surrogate for <strong>squared MMD</strong>.</li>
+<li><strong>Pairwise distance.</strong> Even the simpler choice <mark class="coloredhl-xxgreen">\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\)</mark> is effective in our experiments. Here, \(\mathcal{F}\) gives an <strong>attraction–repulsion objective</strong> based directly on pairwise feature distances.</li>
+</ul>
 <p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
 <p>The main recipe requires neither a prescribed diffusion trajectory nor a pretrained generative teacher. It does use pretrained feature encoders, whose role is to provide the representation spaces in which we compare distributions.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
