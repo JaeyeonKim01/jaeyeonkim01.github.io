@@ -28,10 +28,8 @@ main:focus { outline: none; }
 .hero h1 { margin-bottom: 24px; }
 .intro { line-height: 1.55; }
 .intro p { margin-bottom: 16px; }
-.coloredhl-xred, .coloredhl-xblue, .coloredhl-xxpurple, .coloredhl-xxgreen { padding: 0.08em 0.2em; border-radius: 2px; font-weight: 400; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.coloredhl-xred, .coloredhl-xxgreen { padding: 0.08em 0.2em; border-radius: 2px; font-weight: 400; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .coloredhl-xred { color: var(--xred); background: #ffe6e6; }
-.coloredhl-xblue { color: #4169e1; background: #ecf0fc; }
-.coloredhl-xxpurple { color: #623e99; background: #efecf5; }
 .coloredhl-xxgreen { color: var(--xxgreen); background: #e6f5f3; }
 .hero .social-links { clear: both; }
 .prose a, .news-list a { text-decoration: underline; text-underline-offset: 3px; }
