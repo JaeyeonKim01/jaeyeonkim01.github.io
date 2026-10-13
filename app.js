@@ -76,7 +76,7 @@ function homeView() {
   <section class="background-section prose" aria-labelledby="background-heading"><h2 id="background-heading">Background</h2>${background}</section>
   <section class="easter-egg-section prose" aria-labelledby="easter-egg-heading">
     <details class="easter-egg-toggle">
-    <summary><h2 id="easter-egg-heading">Easter egg</h2></summary>
+    <summary><h2 id="easter-egg-heading">Click here if you think my figures are pretty</h2></summary>
     <p>I use this LaTeX <code>xcolor</code> scheme in most of my first-authored papers. The same colors made it onto this homepage. Apparently, my palette generalizes across domains :) You can grab the <a href="assets/jay_colors_util.tex" download>color scheme here</a>.</p>
     <ul class="palette-swatches" aria-label="A few favorites from my paper palette">
       <li><span class="palette-swatch" style="background-color:#4169E1" aria-hidden="true"></span><code>xblue</code></li>
