@@ -1,12 +1,14 @@
 # Jaeyeon Kim’s homepage
 
-Personal website at https://jaeyeonkim01.github.io/, migrated from al-folio to the current Jay homepage design. Home, Research, Collaboration, and CV are included. The blog is excluded.
+Personal website at https://jaeyeonkim01.github.io/, migrated from al-folio to the current Jay homepage design. Home, Research, Collaboration, Blog, and CV are included.
 
 ## Edit and preview
 
 The published site is entirely in `dist/`. Edit `dist/content.js` for biography, publications, news, collaborators, and CV; `dist/app.js` for page structure and hash routes; and `dist/styles.css` for appearance. Assets and font licenses are in `dist/assets/`.
 
 The homepage’s Easter egg shares the paper palette as `dist/assets/jay_colors_util.tex`.
+
+Edit blog prose in `posts/`, with post metadata in `posts/index.json`, then run `npm run build:blog` to update `dist/posts.js`. Draft equations directly in LaTeX using `\[...\]` and `\(...\)`. The generator renders them with KaTeX, whose styles and fonts are served locally. Run `npm ci` before generating or checking the blog. `npm run check` verifies that the generated blog matches its source. Figures for the Priming post are planned in HTML comments and will be added separately.
 
 Run `npm run dev` and open http://localhost:5173. The preview server uses Node’s standard library and needs no package installation. Use `PORT=5174 npm run dev` if needed. VS Code can forward the port for a remote preview.
 

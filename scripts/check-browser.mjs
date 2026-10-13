@@ -90,7 +90,7 @@ try {
   await screenshot('research-desktop');
   checks.push('Research: 18 papers, search, zero-results reset, year and topic filters');
 
-  for (const route of ['collaboration','cv']) {
+  for (const route of ['collaboration','blog','cv']) {
     await page.goto(`${base}/#/${route}`,{waitUntil:'networkidle'});
     assert.equal(await page.locator('main').getAttribute('data-page'),route);
     await noOverflow(`Desktop ${route}`);
@@ -124,7 +124,7 @@ try {
   assert.equal(await page.locator('.paper-row').count(),18);
   await noOverflow('Mobile research');
   await screenshot('research-mobile');
-  for (const route of ['collaboration','cv']) {
+  for (const route of ['collaboration','blog','cv']) {
     await page.goto(`${base}/#/${route}`,{waitUntil:'networkidle'});
     await noOverflow(`Mobile ${route}`);
   }
@@ -148,15 +148,24 @@ try {
   await noOverflow('Small mobile background');
   checks.push('Background is visible as one paragraph with Chanwoo Park link');
   checks.push('Former About link redirects home; background is preserved on the homepage');
-  assert.equal(await page.locator('#main-nav a[data-route="blog"]').count(),0);
-  assert.equal(await page.evaluate(() => 'posts' in window.SITE_DATA),false);
-  for (const route of ['blog', 'blog/are-we-overthinking-one-step-generation']) {
-    await page.goto(`${base}/#/${route}`,{waitUntil:'networkidle'});
-    assert.equal(await page.locator('h1').innerText(),'Page not found.');
-  }
-  const blogAsset = await page.request.get(`${base}/assets/blog/priming/method.png`);
-  assert.equal(blogAsset.status(),404);
-  checks.push('Blog navigation, routes, content, and published assets are removed');
+  await page.locator('#main-nav a[data-route="blog"]').click();
+  await page.locator('main[data-page="blog"]').waitFor();
+  await page.getByRole('link',{name:'Are We Overthinking One-Step Generation?',exact:true}).click();
+  await page.locator('.blog-body').waitFor();
+  assert.equal(await page.locator('h1').innerText(),'Are We Overthinking One-Step Generation?');
+  assert(await page.locator('.blog-body math').count() > 0);
+  assert(!(await page.locator('.blog-body').innerText()).includes('XXX'));
+  await noOverflow('Small mobile blog post');
+  await page.locator('.blog-toc a').nth(2).click();
+  assert.equal(await page.evaluate(() => document.activeElement.id),'pretraining-shapes-posttraining');
+  await page.reload({waitUntil:'networkidle'});
+  assert.equal(await page.title(),'Jaeyeon Kim - Are We Overthinking One-Step Generation?');
+  assert(await page.locator('#pretraining-shapes-posttraining').evaluate(el => Math.abs(el.getBoundingClientRect().top - 24) < 15));
+  await page.goto(`${base}/#/blog/missing`,{waitUntil:'networkidle'});
+  assert.equal(await page.locator('h1').innerText(),'Post not found.');
+  await page.getByRole('link',{name:'Back to Blog',exact:true}).click();
+  await page.locator('.blog-list').waitFor();
+  checks.push('Blog list, full post, native math, narrow-screen layout, contents links, reload, and missing-post recovery');
   await page.goto(`${base}/#/research`,{waitUntil:'networkidle'});
   const ownNames = page.locator('.authors strong[title^="Jaeyeon Kim"]');
   assert.equal(await ownNames.count(),18);

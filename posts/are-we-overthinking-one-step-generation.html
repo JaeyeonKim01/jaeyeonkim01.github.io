@@ -1,0 +1,137 @@
+<p class="blog-byline">Woobin Park*, Jaeyeon Kim*, Yilun Du, Sitan Chen, Bohyung Han · * Equal contribution</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>Building one- and few-step generative models has received considerable attention over the past few years. This includes Consistency Models <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-1" data-scroll="ref-1">[1]</a>, Distribution Matching Distillation <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-2" data-scroll="ref-2">[2]</a>, Progressive Distillation <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-3" data-scroll="ref-3">[3]</a>, Inductive Moment Matching <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-4" data-scroll="ref-4">[4]</a>, Flow Map Matching <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-5" data-scroll="ref-5">[5]</a>, and MeanFlow <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-6" data-scroll="ref-6">[6]</a>. Their formulations differ, but much of this progress builds on diffusion or flow: compressing an existing sampler, enforcing consistency along a trajectory, or learning the transition across a time interval. Some methods distill a pretrained teacher; others train from scratch using a trajectory-derived relation.</p>
+<p>As someone drawn to the mathematical structure of diffusion and flow models, I have found this line of work exciting. At the same time, one-step inference can still require considerable training machinery. Depending on the method, this includes specialized stabilization losses and schedules, classifier-free guidance, Jacobian–vector products, or a separate diffusion teacher and score-based distributional objective.</p>
+<p class="blog-question"><strong>Does training a one-step generator need to be this complicated?</strong></p>
+<p>To take a step back, consider GANs <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-7" data-scroll="ref-7">[7]</a>. A generator can simply map noise and a condition to a sample, then learn by matching the generated distribution to the data distribution. This approach has already been scaled successfully, for example in BigGAN <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-8" data-scroll="ref-8">[8]</a> and StyleGAN-XL <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-9" data-scroll="ref-9">[9]</a>, although optimization sensitivity and mode collapse remain important challenges <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-10" data-scroll="ref-10">[10]</a>, <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-11" data-scroll="ref-11">[11]</a>. The useful idea is that distribution matching offers a natural path to one-step generation without a prescribed diffusion or flow trajectory.</p>
+<div class="blog-equation" role="group" aria-label="One-step conditional generation">
+\[
+\hat{\mathbf{x}}_0=f_\theta(\boldsymbol{\epsilon},c),\qquad \boldsymbol{\epsilon}\sim\mathcal{N}(0,\mathbf{I}).
+\]
+</div>
+<p>Here, \(c\) is a condition such as a class label or text prompt, and \(q_\theta\) is the distribution of the generated samples. Conceptually, we can train the generator by minimizing a distributional loss \(\mathcal{F}(q_\theta,p_{\mathrm{data}})\), rather than teaching it to follow a particular sampling trajectory.</p>
+<p>Recent Drifting Models <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-12" data-scroll="ref-12">[12]</a> and W-Flow <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-13" data-scroll="ref-13">[13]</a> show that direct distributional learning in feature space can produce strong one-step generators from scratch. Their training recipes nevertheless involve substantial compute and additional design choices (see Section 2 of our paper). This suggests that optimizing a distributional objective from scratch may still require substantial training machinery to make it work. This leads to our central question:</p>
+<aside class="blog-callout" aria-label="Central research question"><p><strong class="blog-callout-label">Question.</strong> <strong>Can a suitable initialization make distributional training easier?</strong></p></aside>
+
+<h2 id="priming-models">Priming Models</h2>
+<p>The idea is simple: <strong>reconstruct first, then match distributions.</strong> Before learning the full noise-to-image mapping, we teach the network to recover clean-image structure from corrupted inputs. The same network is then used directly as a one-step generator and refined with a distributional objective.</p>
+<h3>Reconstruction pretraining</h3>
+<p>Let \(\mathbf{x}_0\) be a clean training image and \(\boldsymbol{\epsilon}\) be independent Gaussian noise. Our simplest corruption mixes 20% clean image with 80% noise, and the network predicts the clean image using a squared-error loss:</p>
+<div class="blog-equation" role="group" aria-label="Fixed-noise reconstruction pretraining">
+\[
+\mathcal{L}_{\mathrm{pre}}(\theta)=\mathbb{E}_{\mathbf{x}_0,\boldsymbol{\epsilon}}\!\left[\left\|f_\theta(\mathbf{x}_{0.8},c)-\mathbf{x}_0\right\|_2^2\right],\qquad \mathbf{x}_{0.8}=0.2\mathbf{x}_0+0.8\boldsymbol{\epsilon}.
+\]
+</div>
+<p>The noise level is fixed throughout this instantiation. We do not need to learn a family of denoising steps or a time-dependent flow map. A high noise level brings the inputs closer to the pure noise used at generation time, while the remaining clean-image information guides reconstruction.</p>
+<p>For our main ImageNet models, we also use perceptual reconstruction losses in LPIPS and ConvNeXt feature spaces, with weights 0.4 and 0.1, respectively. The fixed-noise squared-error objective is the basic recipe; the perceptual terms improve its initialization for later post-training.</p>
+<h3>Distributional post-training</h3>
+<p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Given a frozen feature encoder \(\phi\), we match the distributions of generated and real features:</p>
+<div class="blog-equation" role="group" aria-label="Feature-space distributional post-training">
+\[
+\begin{aligned}
+\mathcal{L}_{\mathrm{post}}(\theta)&=\mathcal{F}(\phi_{\#}q_\theta,\phi_{\#}p_{\mathrm{data}}),\\
+\mathcal{F}(a,b)&=\mathcal{D}(a,b)-\mathcal{D}(a,\mathrm{sg}[a]).
+\end{aligned}
+\]
+</div>
+<p>The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through φ, and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features. The second provides a repulsive self-interaction among generated samples.</p>
+<p>Our main choice of \(\mathcal{D}\) is an optimal transport cost. For each minibatch, we compute an entropy-regularized transport plan between generated and real features using Sinkhorn iterations, then backpropagate the transport cost through the frozen encoder and generator. On ImageNet, we combine sharper and smoother transport costs, with regularization strengths 0.001 and 0.01 and weights 0.75 and 0.25.</p>
+<p>The main recipe requires neither a prescribed diffusion trajectory nor a pretrained generative teacher. It does use pretrained feature encoders, whose role is to provide the representation spaces in which we compare distributions.</p>
+<!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
+
+<h2 id="pretraining-shapes-posttraining">Pretraining shapes post-training</h2>
+<p>The pretrained network need not already be a good generator. Its outputs from pure noise are initially poor, yet distributional post-training rapidly turns them into clean images. In the ImageNet training trajectory shown in our main figure, visibly noisy outputs become clean images within 1,250 post-training updates. FID falls sharply early in this stage and continues to improve through 25,000 updates.</p>
+<p>We also compare networks pretrained for 20, 80, and 160 epochs without perceptual loss, together with a network pretrained for 160 epochs with perceptual loss. At matched post-training updates, longer reconstruction pretraining is associated with lower FID, and perceptual pretraining further improves the result. Thus, the useful output of the first stage is an initialization that can be refined efficiently, even if it does not yet produce good samples.</p>
+<!-- Figure planned: main training trajectory and matched pretraining-length curves. -->
+<h3>Why might this happen?</h3>
+<p>We do not claim to have a complete explanation. Our Jacobian analysis probes one possible mechanism: a useful loss gradient does not guarantee that parameter updates can realize a useful change in the generated features.</p>
+<p>Write \(h_\theta\) for the generated features and \(v\) for the gradient of the distributional loss with respect to them. A small gradient-descent step with learning rate \(\eta\) induces the approximate feature update</p>
+<div class="blog-equation" role="group" aria-label="Linearized feature update under gradient descent">
+\[
+\Delta h_\theta\approx-\eta J_\theta J_\theta^{\top}v,\qquad J_\theta=\frac{\partial h_\theta}{\partial\theta}.
+\]
+</div>
+<p>The matrix \(J_\theta J_\theta^{\top}\) determines how the loss gradient translates into movement in feature space. If the gradient points along directions to which the Jacobian responds weakly, a parameter update may make little progress. Our hypothesis is that reconstruction pretraining makes relevant correction directions more accessible.</p>
+<p>To test this, we examine the four initializations <em>before</em> distributional post-training. We use matched Gaussian inputs to generate 512 samples for each of eight ImageNet classes. Across 13 frozen feature outputs from ResNet-MAE and ConvNeXt, we collect OT gradients and retain their top 64 PCA directions. We measure the Jacobian’s response along this estimated correction subspace, normalized by its overall squared Frobenius norm.</p>
+<details class="blog-detail"><summary>How we measure the Jacobian response</summary>
+<p>For an orthonormal basis \(U\) of the correction subspace, we estimate the normalized response below, where \(d\) is the feature dimension and \(r=64\). The expectations average squared responses over generated samples.</p>
+<div class="blog-equation" role="group" aria-label="Normalized Jacobian response in the OT-gradient subspace">
+\[
+\mathcal{A}=\frac{d}{r}\,\frac{\mathbb{E}\left\|J_\theta^{\top}U\right\|_F^2}{\mathbb{E}\left\|J_\theta\right\|_F^2}.
+\]
+</div>
+<p>We fit the PCA basis on the opposite fold and average classwise scores over the eight classes. We then compare these initialization scores with online-weight FID after a common 12,500 post-training updates, avoiding differences in EMA histories.</p></details>
+<p>Across the initializations studied, stronger normalized response in relevant feature spaces is associated with better subsequent FID. The association extends across multiple ResNet-MAE outputs, but is not uniform: the ConvNeXt global-mean feature does not follow the same ordering. These observations are consistent with our hypothesis, rather than a proof that Jacobian alignment fully explains the improvement.</p>
+<!-- Figure planned: normalized Jacobian response versus FID at matched 12,500 updates. -->
+
+<h2 id="flexibility">Flexibility of both training stages</h2>
+<p>The framework is not tied to one corruption or one distributional loss. What matters is the sequence: learn a related reconstruction capability, then optimize the generated distribution.</p>
+<p><strong>Alternative pretraining.</strong> Replacing 80% of image patches with Gaussian noise and reconstructing the image reaches FID 1.87 after 160 pretraining epochs and 12,500 post-training updates. We also recover clean-image representations from a frozen RAEv2 <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-14" data-scroll="ref-14">[14]</a> encoder and compose the student with its frozen decoder. This variant reaches FID 2.34 after 12,500 post-training updates. The representation-based variant uses a pretrained representation teacher; it is an optional alternative to the main pixel-space recipe.</p>
+<p><strong>Alternative distributional objectives.</strong> Starting from the same perceptually pretrained Priming-B-160 checkpoint, we replace OT with a mean pairwise-distance objective or a negative Laplacian-kernel surrogate. At 25,000 updates, they achieve FIDs of 1.95 and 1.85, respectively, compared with 1.38 for OT. Thus, multiple distributional losses work, with OT yielding the best FID among these choices.</p>
+<p><strong>Alternative feature spaces.</strong> Replacing ResNet-MAE and ConvNeXt with SigLIP, ViT-MAE, and Inception-V3 yields FID 1.65 and FDr⁵ 6.13 after 25,000 updates. The latter score improves on the reference, but these encoders also contribute to FDr⁵, so that improvement is not independent held-out-feature evidence.</p>
+<div class="blog-table" role="region" aria-label="ImageNet training-design alternatives" tabindex="0"><table><caption>ImageNet alternatives reported in the paper</caption><thead><tr><th scope="col">Configuration</th><th scope="col">FID ↓</th><th scope="col">Post-training updates</th></tr></thead><tbody>
+<tr><th scope="row">Priming-B-160, perceptual + OT</th><td>1.38</td><td>25,000</td></tr>
+<tr><th scope="row">Without perceptual loss</th><td>2.07</td><td>25,000</td></tr>
+<tr><th scope="row">Patch masking</th><td>1.87</td><td>12,500</td></tr>
+<tr><th scope="row">RAE representation pretraining</th><td>2.34</td><td>12,500</td></tr>
+<tr><th scope="row">Pairwise-distance objective</th><td>1.95</td><td>25,000</td></tr>
+<tr><th scope="row">Laplacian-kernel surrogate</th><td>1.85</td><td>25,000</td></tr>
+<tr><th scope="row">SigLIP / MAE / Inception features</th><td>1.65</td><td>25,000</td></tr>
+</tbody></table></div>
+<p class="blog-note">Masking and RAE use a shorter post-training horizon; the table demonstrates viable alternatives, not a comparison at identical training budgets.</p>
+<p>The noise level also matters. At a matched 12,500-update budget, our default \(s=0.8\) reaches FID 1.65, while pretraining entirely on pure noise (\(s=1.0\)) reaches 65.08. This supports the intuition that pretraining should retain enough clean-image information for reconstruction while remaining close to the generator’s eventual noise inputs. We also apply FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-15" data-scroll="ref-15">[15]</a> as another distributional post-training objective in the paper’s appendix.</p>
+<!-- Figure planned: pretraining and post-training ablations. -->
+
+<h2 id="results">Results across three domains</h2>
+<h3>ImageNet: class-conditional generation</h3>
+<p>We train directly in pixel space at 256 × 256 resolution, using Priming-B with 115.1M parameters and Priming-L with 405.1M parameters. Each size is pretrained for 80 or 160 epochs, then receives 25,000 OT post-training updates.</p>
+<div class="blog-table" role="region" aria-label="ImageNet quality and training compute" tabindex="0"><table><caption>ImageNet-256: one-step generation</caption><thead><tr><th scope="col">Model</th><th scope="col">FID ↓</th><th scope="col">FDr⁵ ↓</th><th scope="col">Training EFLOPs</th></tr></thead><tbody>
+<tr><th scope="row">Drifting-B</th><td>1.74</td><td>15.30</td><td>1,048.23</td></tr>
+<tr><th scope="row">Priming-B, 80 epochs</th><td>1.47</td><td>12.71</td><td>85.75</td></tr>
+<tr><th scope="row">Priming-B, 160 epochs</th><td>1.38</td><td>11.23</td><td>124.18</td></tr>
+<tr><th scope="row">Drifting-L</th><td>1.61</td><td>12.59</td><td>1,476.39</td></tr>
+<tr><th scope="row">W-Flow XL/2</th><td>1.33</td><td>11.07</td><td>3,744.43</td></tr>
+<tr><th scope="row">Priming-L, 80 epochs</th><td>1.27</td><td>8.94</td><td>151.29</td></tr>
+<tr class="blog-result"><th scope="row">Priming-L, 160 epochs</th><td><strong>1.19</strong></td><td><strong>7.10</strong></td><td>238.95</td></tr>
+</tbody></table></div>
+<p>Priming-L-160 achieves FID 1.19 at 238.95 EFLOPs, compared with Drifting-L’s 1.61 at 1,476.39 EFLOPs: approximately 6.2× less training compute. Priming-B-80 achieves FID 1.47 with approximately 12.2× less compute than Drifting-B. These costs include both training stages and feature-encoder computations; they are compute ratios, not wall-clock speedups.</p>
+<p class="blog-note">The headline scores are means over three independent 50,000-image sampling draws from each fixed trained checkpoint, not three independent training runs. FDr⁵ averages normalized Fréchet distances in five evaluation feature spaces. This comparison follows the paper’s baseline set and excludes configurations explicitly optimized against Inception Fréchet distance, such as the 0.72-FID model reported by FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-15" data-scroll="ref-15">[15]</a>.</p>
+<!-- Figure planned: ImageNet quality–compute frontier. -->
+<h3>Text-to-image generation</h3>
+<p>At 512 × 512 resolution, we use the same 258M-parameter MM-JiT-B/16 backbone as the MiniT2I MeanFlow baseline, with a frozen FLAN-T5-Large text encoder. Our logit-normal pretraining variant uses 290,000 reconstruction updates followed by 4,000 distributional post-training updates.</p>
+<div class="blog-table" role="region" aria-label="Text-to-image results" tabindex="0"><table><caption>Text-to-image: alignment and training compute</caption><thead><tr><th scope="col">Model</th><th scope="col">GenEval ↑</th><th scope="col">DPG-Bench ↑</th><th scope="col">EFLOPs</th></tr></thead><tbody>
+<tr><th scope="row">MeanFlow, 1 step</th><td>0.548</td><td>76.49</td><td>546.64</td></tr>
+<tr><th scope="row">Priming, fixed noise, 200k</th><td>0.740</td><td>81.30</td><td>293.53</td></tr>
+<tr class="blog-result"><th scope="row">Priming, logit-normal, 290k</th><td><strong>0.818</strong></td><td><strong>82.16</strong></td><td>420.16</td></tr>
+</tbody></table></div>
+<p>The logit-normal variant improves both metrics over one-step MeanFlow with 23.1% less training compute. Its scores approach four-step MeanFlow’s 0.842 GenEval and 83.23 DPG-Bench, while retaining a single network evaluation per image. The fixed-noise variant offers a lower-compute alternative.</p>
+<h3>Action-conditioned world modeling</h3>
+<p>On RT-1 and Bridge-V2, the model predicts the next frame conditioned on recent observations and actions. We use an action-conditioned U-Net in the SD3-VAE latent space, with 64 epochs of reconstruction pretraining followed by 4,000 distributional post-training updates.</p>
+<p>On RT-1, Priming reaches FID 3.16 versus DriftWorld’s 8.99, using 12.37 versus 30.71 EFLOPs. On Bridge-V2, it reaches FID 2.82 versus 4.86, using 9.50 versus 37.05 EFLOPs. This corresponds to 59.7% and 74.4% less training compute, respectively.</p>
+<p>Under the evaluated rollout protocol, Priming also improves SSIM, PSNR, LPIPS, and FVD over both DriftWorld and the 32-step flow-matching baseline. We do not use DriftWorld’s motion weighting or self-forcing techniques. Each predicted frame requires one network evaluation; predicting a sequence of frames is still autoregressive. Evaluation uses eight-frame chunks with re-anchoring to real trajectories between chunks.</p>
+<!-- Figure planned: text-to-image and world-model samples. -->
+
+<h2 id="outlook">What remains open?</h2>
+<p>Our results suggest a simple design principle: learn to reconstruct first, then use that initialization to learn the distribution. Reconstruction pretraining makes direct distributional training effective without requiring the first stage to produce good samples.</p>
+<p>Several questions remain. Priming Models still rely on pretrained feature encoders. The connection between reconstruction and Jacobian alignment deserves a deeper explanation, and closing the remaining gap with strong multistep models remains important. We hope this work opens the door to simpler and more scalable ways to train one-step generators.</p>
+
+
+<h2 id="references">References</h2>
+<ol class="blog-references">
+<li id="ref-1" tabindex="-1">Song et al. (2023). <a href="https://arxiv.org/abs/2303.01469">Consistency Models</a>.</li>
+<li id="ref-2" tabindex="-1">Yin et al. (2024). <a href="https://arxiv.org/abs/2311.18828">One-step Diffusion with Distribution Matching Distillation</a>.</li>
+<li id="ref-3" tabindex="-1">Salimans and Ho (2022). <a href="https://arxiv.org/abs/2202.00512">Progressive Distillation for Fast Sampling of Diffusion Models</a>.</li>
+<li id="ref-4" tabindex="-1">Zhou, Ermon, and Song (2025). <a href="https://arxiv.org/abs/2503.07565">Inductive Moment Matching</a>.</li>
+<li id="ref-5" tabindex="-1">Boffi, Albergo, and Vanden-Eijnden (2024). <a href="https://arxiv.org/abs/2406.07507">Flow Map Matching with Stochastic Interpolants: A Mathematical Framework for Consistency Models</a>.</li>
+<li id="ref-6" tabindex="-1">Geng et al. (2025). <a href="https://arxiv.org/abs/2505.13447">Mean Flows for One-step Generative Modeling</a>.</li>
+<li id="ref-7" tabindex="-1">Goodfellow et al. (2014). <a href="https://arxiv.org/abs/1406.2661">Generative Adversarial Networks</a>.</li>
+<li id="ref-8" tabindex="-1">Brock, Donahue, and Simonyan (2018). <a href="https://arxiv.org/abs/1809.11096">Large Scale GAN Training for High Fidelity Natural Image Synthesis</a>.</li>
+<li id="ref-9" tabindex="-1">Sauer, Schwarz, and Geiger (2022). <a href="https://arxiv.org/abs/2202.00273">StyleGAN-XL: Scaling StyleGAN to Large Diverse Datasets</a>.</li>
+<li id="ref-10" tabindex="-1">Gulrajani et al. (2017). <a href="https://arxiv.org/abs/1704.00028">Improved Training of Wasserstein GANs</a>.</li>
+<li id="ref-11" tabindex="-1">Mescheder, Geiger, and Nowozin (2018). <a href="https://arxiv.org/abs/1801.04406">Which Training Methods for GANs do actually Converge?</a>.</li>
+<li id="ref-12" tabindex="-1">Deng et al. (2026). <a href="https://arxiv.org/abs/2602.04770">Generative Modeling via Drifting</a>.</li>
+<li id="ref-13" tabindex="-1">Han et al. (2026). <a href="https://arxiv.org/abs/2605.11755">One-Step Generative Modeling via Wasserstein Gradient Flows</a>.</li>
+<li id="ref-14" tabindex="-1">Singh et al. (2026). <a href="https://arxiv.org/abs/2605.18324">Improved Baselines with Representation Autoencoders</a>.</li>
+<li id="ref-15" tabindex="-1">Yang et al. (2026). <a href="https://arxiv.org/abs/2604.28190">Representation Fréchet Loss for Visual Generation</a>.</li>
+</ol>

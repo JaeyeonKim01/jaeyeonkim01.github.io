@@ -22,11 +22,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Install dependencies
+        run: npm ci
       - name: Check JavaScript
         run: npm run check
       - name: Install browser test tools
         run: |
-          npm ci
           npx playwright install --with-deps chromium
       - name: Check desktop and mobile pages
         run: |
