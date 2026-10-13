@@ -26,7 +26,7 @@
 <p>The noise level is fixed throughout this instantiation. Therefore, the Priming Model does not learn a family of denoising steps or a time-dependent flow matching trajectory.</p>
 <p>For our ImageNet experiments, we also add a perceptual loss that matches reconstructed and clean images in LPIPS and ConvNeXt feature spaces.</p>
 <h3>Distributional post-training</h3>
-<p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Since the model has not been trained on pure noise during this pretraining stage, its initial samples are still noisy (Figure 1, right, in our paper). Nevertheless, the pretrained network provides a strong initialization for subsequent distributional training.</p>
+<p>After pretraining, we feed pure Gaussian noise into the same network and treat its output directly as a one-step sample. Since the model has not been trained on pure noise during this pretraining stage, its initial samples are still noisy (<a href="#/blog/are-we-overthinking-one-step-generation/figure-1" data-scroll="figure-1">Figure 1</a>). Nevertheless, the pretrained network provides a strong initialization for subsequent distributional training.</p>
 <p>Given a frozen feature encoder \(\phi\), we match the distributions of generated and real features:</p>
 <div class="blog-equation" role="group" aria-label="Feature-space distributional post-training">
 \[
@@ -48,30 +48,22 @@
 <p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
 
+<div class="blog-figure-pair" role="group" aria-label="Post-training efficiency and the effect of pretraining duration">
+<figure id="figure-1">
+<a href="assets/blog/priming/posttraining-trajectory.png" target="_blank" rel="noopener" aria-label="Open the full-size post-training trajectory figure"><img src="assets/blog/priming/posttraining-trajectory.png" width="1201" height="786" loading="lazy" alt="Priming-B starts with noisy outputs after reconstruction pretraining, then reaches FID 2.26 after 1,250 post-training updates, while Drifting-B improves more gradually with training compute."></a>
+<figcaption><strong>Figure 1. Rapid refinement.</strong> Reconstruction pretraining makes subsequent distributional post-training efficient.</figcaption>
+</figure>
+<figure id="figure-2">
+<a href="assets/blog/priming/pretraining-epochs.png" target="_blank" rel="noopener" aria-label="Open the full-size pretraining-duration figure"><img src="assets/blog/priming/pretraining-epochs.png" width="1200" height="834" loading="lazy" alt="Online FID during post-training for 20, 80, and 160 pretraining epochs, plus 160 epochs with perceptual loss. Longer reconstruction pretraining generally yields lower FID at matched post-training updates."></a>
+<figcaption><strong>Figure 2. Longer pretraining helps.</strong> Online FID at matched post-training updates for 20, 80, and 160 epochs, with a perceptual-loss variant.</figcaption>
+</figure>
+</div>
 <h2 id="pretraining-shapes-posttraining">Pretraining shapes post-training</h2>
-<p>Reconstruction pretraining makes distributional post-training substantially more efficient, a key factor behind our empirical results. As shown in Figure 1 (right) of our paper, post-training rapidly turns the initially noisy outputs into clean images: Priming-B pretrained for 160 epochs with perceptual loss reaches FID 2.26 after only 1,250 distributional post-training updates, using the online weights.</p>
-<p>In general, longer pretraining also improves the efficiency of post-training. We compare networks pretrained for 20, 80, and 160 epochs without perceptual loss. At matched post-training updates, longer reconstruction pretraining is associated with lower FID. Thus, the useful output of the first stage is an initialization that can be refined efficiently, even if it does not yet produce good samples.</p>
-<!-- Figure planned: main training trajectory and matched pretraining-length curves. -->
-<h3>Why might this happen?</h3>
-<p>We do not claim to have a complete explanation. Our Jacobian analysis probes one possible mechanism: a useful loss gradient does not guarantee that parameter updates can realize a useful change in the generated features.</p>
-<p>Write \(h_\theta\) for the generated features and \(v\) for the gradient of the distributional loss with respect to them. A small gradient-descent step with learning rate \(\eta\) induces the approximate feature update</p>
-<div class="blog-equation" role="group" aria-label="Linearized feature update under gradient descent">
-\[
-\Delta h_\theta\approx-\eta J_\theta J_\theta^{\top}v,\qquad J_\theta=\frac{\partial h_\theta}{\partial\theta}.
-\]
-</div>
-<p>The matrix \(J_\theta J_\theta^{\top}\) determines how the loss gradient translates into movement in feature space. If the gradient points along directions to which the Jacobian responds weakly, a parameter update may make little progress. Our hypothesis is that reconstruction pretraining makes relevant correction directions more accessible.</p>
-<p>To test this, we examine the four initializations <em>before</em> distributional post-training. We use matched Gaussian inputs to generate 512 samples for each of eight ImageNet classes. Across 13 frozen feature outputs from ResNet-MAE and ConvNeXt, we collect OT gradients and retain their top 64 PCA directions. We measure the Jacobian’s response along this estimated correction subspace, normalized by its overall squared Frobenius norm.</p>
-<details class="blog-detail"><summary>How we measure the Jacobian response</summary>
-<p>For an orthonormal basis \(U\) of the correction subspace, we estimate the normalized response below, where \(d\) is the feature dimension and \(r=64\). The expectations average squared responses over generated samples.</p>
-<div class="blog-equation" role="group" aria-label="Normalized Jacobian response in the OT-gradient subspace">
-\[
-\mathcal{A}=\frac{d}{r}\,\frac{\mathbb{E}\left\|J_\theta^{\top}U\right\|_F^2}{\mathbb{E}\left\|J_\theta\right\|_F^2}.
-\]
-</div>
-<p>We fit the PCA basis on the opposite fold and average classwise scores over the eight classes. We then compare these initialization scores with online-weight FID after a common 12,500 post-training updates, avoiding differences in EMA histories.</p></details>
-<p>Across the initializations studied, stronger normalized response in relevant feature spaces is associated with better subsequent FID. The association extends across multiple ResNet-MAE outputs, but is not uniform: the ConvNeXt global-mean feature does not follow the same ordering. These observations are consistent with our hypothesis, rather than a proof that Jacobian alignment fully explains the improvement.</p>
-<!-- Figure planned: normalized Jacobian response versus FID at matched 12,500 updates. -->
+<p>Reconstruction pretraining makes distributional post-training substantially more efficient, a key factor behind our empirical results. As shown in <a href="#/blog/are-we-overthinking-one-step-generation/figure-1" data-scroll="figure-1">Figure 1</a>, post-training rapidly turns the initially noisy outputs into clean images: Priming-B pretrained for 160 epochs with perceptual loss reaches FID 2.26 after only 1,250 distributional post-training updates, using the online weights.</p>
+<p>In general, longer pretraining also improves the efficiency of post-training. <a href="#/blog/are-we-overthinking-one-step-generation/figure-2" data-scroll="figure-2">Figure 2</a> compares networks pretrained for 20, 80, and 160 epochs without perceptual loss, alongside a 160-epoch perceptual-loss variant. At matched post-training updates, longer reconstruction pretraining is associated with lower FID. Thus, the useful output of the first stage is an initialization that can be refined efficiently, even if it does not yet produce good samples.</p>
+<details class="blog-detail"><summary>What might this happen?: Jacobian analysis</summary>
+<p>[TODO]</p>
+</details>
 
 <h2 id="flexibility">Flexibility of both training stages</h2>
 <p>The framework is not tied to one corruption or one distributional loss. What matters is the sequence: learn a related reconstruction capability, then optimize the generated distribution.</p>
