@@ -76,7 +76,7 @@ function homeView() {
   <section class="background-section prose" aria-labelledby="background-heading"><h2 id="background-heading">Background</h2>${background}</section>
   <section class="easter-egg-section prose" aria-labelledby="easter-egg-heading">
     <details class="easter-egg-toggle">
-    <summary><h2 id="easter-egg-heading">Easter egg</h2></summary>
+    <summary><h2 id="easter-egg-heading">Click here if you think my figures are pretty</h2></summary>
     <p>I use this LaTeX <code>xcolor</code> scheme in most of my first-authored papers. The same colors made it onto this homepage. Apparently, my palette generalizes across domains :) You can grab the <a href="assets/jay_colors_util.tex" download>color scheme here</a>.</p>
     <ul class="palette-swatches" aria-label="A few favorites from my paper palette">
       <li><span class="palette-swatch" style="background-color:#4169E1" aria-hidden="true"></span><code>xblue</code></li>
@@ -113,28 +113,6 @@ function collaborationView() {
   return `<section class="page-heading"><h1>Collaboration</h1></section><article class="prose collaboration-content">${data.collaborationHtml}</article>`;
 }
 
-function blogView(slug) {
-  const posts = window.BLOG_POSTS || [];
-  if (slug) {
-    const post = posts.find(post => post.slug === slug);
-    if (!post) return `<section class="page-heading"><h1>Post not found.</h1><p><a href="#/blog">Back to Blog</a></p></section>`;
-    const body = document.createElement('template');
-    body.innerHTML = post.html;
-    body.content.querySelectorAll('a[href^="https://"]').forEach(anchor => {
-      anchor.target = '_blank';
-      anchor.rel = 'noopener noreferrer';
-    });
-    const headings = [...body.content.querySelectorAll('h2')];
-    headings.forEach((heading, index) => {
-      heading.id ||= `blog-section-${index + 1}`;
-      heading.tabIndex = -1;
-    });
-    const contents = headings.length ? `<nav class="blog-toc" aria-label="Table of contents"><p>Contents</p><ol>${headings.map(heading => `<li><a href="#/blog/${encodeURIComponent(post.slug)}/${esc(heading.id)}" data-scroll="${esc(heading.id)}">${esc(heading.textContent.replace(/^\d+\.\s*/, ''))}</a></li>`).join('')}</ol></nav>` : '';
-    return `<article class="blog-post"><header class="page-heading"><p><a href="#/blog">Back to Blog</a></p><h1>${esc(post.title)}</h1></header><div class="blog-layout">${contents}<div class="prose blog-body">${body.innerHTML}</div></div></article>`;
-  }
-  return `<section class="page-heading"><h1>Blog</h1></section><ul class="blog-list">${posts.map(post => `<li><a href="#/blog/${encodeURIComponent(post.slug)}">${esc(post.title)}</a>${post.description ? `<p>${esc(post.description)}</p>` : ''}</li>`).join('')}</ul>`;
-}
-
 function cvView() {
   return `<section class="page-heading cv-heading"><div><h1>Curriculum vitae</h1><p>Jaeyeon Kim · Computer Science, Harvard University</p></div>${link('assets/Jaeyeon_CV.pdf','Download PDF','primary-link','download')}</section>
     <div class="cv-layout"><nav class="cv-toc" aria-label="CV sections">${data.cv.map((section, i) => `<a href="#/cv/section-${i}" data-scroll="section-${i}">${esc(section.title)}</a>`).join('')}</nav><div class="cv-sections">${data.cv.map((section, i) => `<details id="section-${i}" class="cv-section" open><summary><h2>${esc(section.title)}</h2></summary><div class="cv-section-body">${section.contents.map(item => section.type === 'map' ? `<dl class="cv-map"><dt>${esc(item.name)}</dt><dd>${esc(item.value)}</dd></dl>` : `<div class="cv-item"><div class="cv-year">${esc(item.year)}</div><div><h3>${esc(item.title)}</h3>${item.description ? (Array.isArray(item.description) ? `<ul>${item.description.map(line => `<li>${esc(line)}</li>`).join('')}</ul>` : `<p>${esc(item.description)}</p>`) : ''}${(item.linkitems || []).map(item => link(item.link, esc(item.linkname), 'text-link')).join('')}</div></div>`).join('')}</div></details>`).join('')}</div></div>`;
@@ -145,18 +123,17 @@ function renderPage() {
   const route = path.split('/')[1] || 'home';
   if (route === 'about') { location.replace('#/'); return; }
   const params = new URLSearchParams(query || '');
-  const views = {home:homeView, research:() => researchView(params), collaboration:collaborationView, blog:() => blogView(path.split('/')[2]), cv:cvView};
+  const views = {home:homeView, research:() => researchView(params), collaboration:collaborationView, cv:cvView};
   main.innerHTML = views[route] ? views[route]() : `<section class="page-heading"><div class="eyebrow">404</div><h1>Page not found.</h1><p>${link('#/','Back home','text-link','right')}</p></section>`;
   main.dataset.page = route;
   const label = route === 'home' ? 'Home' : route.charAt(0).toUpperCase()+route.slice(1);
-  const postTitle = route === 'blog' ? (window.BLOG_POSTS || []).find(post => post.slug === path.split('/')[2])?.title : null;
-  document.title = `Jaeyeon Kim - ${postTitle || label}`;
+  document.title = `Jaeyeon Kim - ${label}`;
   document.querySelectorAll('[data-route]').forEach(item => {
     if (item.dataset.route === route) item.setAttribute('aria-current','page');
     else item.removeAttribute('aria-current');
   });
   if (route === 'research') updatePapers();
-  const sectionId = route === 'cv' ? path.split('/')[2] : route === 'blog' ? path.split('/')[3] : null;
+  const sectionId = route === 'cv' ? path.split('/')[2] : null;
   if (sectionId) {
     const target = document.getElementById(sectionId);
     if (target?.matches('details')) target.open = true;

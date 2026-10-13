@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
-    "build:blog": "node scripts/sync-blog.mjs",
-    "check": "node --check dist/app.js && node --check scripts/serve.mjs && node scripts/sync-blog.mjs --check",
+    "build:public": "node scripts/build-public.mjs",
+    "check": "node --check dist/app.js && node --check scripts/serve.mjs && node --check scripts/build-public.mjs",
     "test": "node scripts/check-browser.mjs"
   },
   "devDependencies": {

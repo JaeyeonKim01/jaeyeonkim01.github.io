@@ -183,6 +183,11 @@ main:focus { outline: none; }
 .blog-table thead th { font-weight: 600; background: #f8f9fb; }
 .blog-table tbody th { font-weight: 400; }
 .blog-table td { white-space: nowrap; }
+.blog-ablation-table .ablation-reference { background: #eee3db; }
+.blog-ablation-table .ablation-reference th, .blog-ablation-table .ablation-reference td { font-weight: 600; }
+.blog-ablation-table .ablation-pretraining { background: #eeeaf7; }
+.blog-ablation-table .ablation-loss { background: #e8f0f8; }
+.blog-ablation-table .ablation-feature { background: #e5f4f1; }
 .blog-result { background: #e5f4f1; }
 .blog-detail { margin: 22px 0; padding: 14px 16px; border: 1px solid var(--border); }
 .blog-detail summary { cursor: pointer; font-weight: 500; }

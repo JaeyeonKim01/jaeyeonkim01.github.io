@@ -26,22 +26,24 @@ jobs:
         run: npm ci
       - name: Check JavaScript
         run: npm run check
+      - name: Build public homepage without local blog drafts
+        run: npm run build:public
       - name: Install browser test tools
         run: |
           npx playwright install --with-deps chromium
       - name: Check desktop and mobile pages
         run: |
-          npm run dev > /tmp/homepage-preview.log 2>&1 &
+          SITE_DIR=public-dist npm run dev > /tmp/homepage-preview.log 2>&1 &
           preview_pid=$!
           trap 'kill "$preview_pid"' EXIT
           for attempt in {1..30}; do
             if curl --silent --fail http://127.0.0.1:5173/ > /dev/null; then break; fi
             sleep 1
           done
-          npm test
+          PUBLIC_SITE=1 npm test
       - name: Publish static homepage
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: public-dist
           clean: true

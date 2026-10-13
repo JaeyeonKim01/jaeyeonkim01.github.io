@@ -1,14 +1,14 @@
 # Jaeyeon Kim’s homepage
 
-Personal website at https://jaeyeonkim01.github.io/, migrated from al-folio to the current Jay homepage design. Home, Research, Collaboration, Blog, and CV are included.
+Personal website at https://jaeyeonkim01.github.io/, migrated from al-folio to the current Jay homepage design. The public homepage includes Home, Research, Collaboration, and CV. Blog drafts stay in the local preview.
 
 ## Edit and preview
 
-The published site is entirely in `dist/`. Edit `dist/content.js` for biography, publications, news, collaborators, and CV; `dist/app.js` for page structure and hash routes; and `dist/styles.css` for appearance. Assets and font licenses are in `dist/assets/`.
+Edit `dist/content.js` for biography, publications, news, collaborators, and CV; `dist/app.js` for page structure and hash routes; and `dist/styles.css` for appearance. Assets and font licenses are in `dist/assets/`. The local preview serves `dist/`; the public build is generated separately in `public-dist/`.
 
 The homepage’s Easter egg shares the paper palette as `dist/assets/jay_colors_util.tex`.
 
-Edit blog prose in `posts/`, with post metadata in `posts/index.json`, then run `npm run build:blog` to update `dist/posts.js`. Draft equations directly in LaTeX using `\[...\]` and `\(...\)`. The generator renders them with KaTeX, whose styles and fonts are served locally. Run `npm ci` before generating or checking the blog. `npm run check` verifies that the generated blog matches its source. Figures for the Priming post are planned in HTML comments and will be added separately.
+The private local workspace keeps blog prose in `posts/` and metadata in `posts/index.json`. There, run `npm run build:blog` to update `dist/posts.js`. Draft equations in LaTeX using `\[...\]` and `\(...\)`; the generator renders them with locally served KaTeX. Blog sources, compiled posts, and figure assets are excluded from the public repository and public build. Keep blog edits local unless publication is explicitly requested.
 
 Run `npm run dev` and open http://localhost:5173. The preview server uses Node’s standard library and needs no package installation. Use `PORT=5174 npm run dev` if needed. VS Code can forward the port for a remote preview.
 
@@ -18,7 +18,9 @@ Run `npm run check` for JavaScript syntax checks. For browser checks, run `npm c
 
 ## Publish
 
-A push to `main` runs `.github/workflows/deploy.yml`, checks JavaScript and desktop/mobile behavior, and publishes `dist/` to `gh-pages`. GitHub Pages continues to serve the root of `gh-pages` at the existing homepage URL. No Jekyll or build step is required. The `.nojekyll` file tells Pages to serve the files directly.
+A push to `main` runs `.github/workflows/deploy.yml`, generates `public-dist/` with `npm run build:public`, checks the public homepage, and publishes only `public-dist/` to `gh-pages`. The build excludes blog navigation, routes, compiled posts, and figure assets, and replaces collaboration links to the private post with its public code link. GitHub Pages serves the root of `gh-pages` at the existing homepage URL. The `.nojekyll` file tells Pages to serve the files directly.
+
+To check the public build locally, run `npm run build:public`, then `SITE_DIR=public-dist PORT=5174 npm run dev`. Run `PUBLIC_SITE=1 PREVIEW_URL=http://127.0.0.1:5174 npm test` against this server. `node scripts/build-public.mjs --check` verifies that blog artifacts are absent.
 
 The former `/publications/`, `/research/`, `/collaboration/`, `/cv/`, `/about/`, and `/news/` URLs redirect to the corresponding pages in the new site. The downloadable CV is `dist/assets/Jaeyeon_CV.pdf`.
 
