@@ -39,12 +39,11 @@
 \mathcal{F}(a,b)=\mathcal{D}(a,b)-\mathcal{D}(a,\mathrm{sg}[a]).
 \]
 </div>
-<p>Here, \(a=\phi_{\#}q_\theta\) and \(b=\phi_{\#}p_{\mathrm{data}}\) denote the distributions of generated and real features, respectively. The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through \(\phi\), and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features; the second provides a repulsive self-interaction among generated samples.</p>
-<p>Different choices of \(\mathcal{D}\) lead to different objectives \(\mathcal{F}\):</p>
+<p>Here, \(a=\phi_{\#}q_\theta\) and \(b=\phi_{\#}p_{\mathrm{data}}\) denote the distributions of generated and real features, respectively. The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through \(\phi\), and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features; the second provides a repulsive self-interaction among generated samples. Different choices of \(\mathcal{D}\) lead to different objectives \(\mathcal{F}\):</p>
 <ul class="blog-loss-choices">
-<li><strong>Optimal transport</strong> (<mark class="coloredhl-xxgreen">\(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\)</mark>): \(\mathcal{F}\) is a surrogate for <strong>Sinkhorn divergence</strong>, our main choice.</li>
-<li><strong>Laplacian kernel</strong> (<mark class="coloredhl-xxgreen">\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[-\exp(-\|x-y\|_2)]\)</mark>): \(\mathcal{F}\) is a surrogate for <strong>squared MMD</strong>.</li>
-<li><strong>Pairwise distance</strong> (<mark class="coloredhl-xxgreen">\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\)</mark>): \(\mathcal{F}\) is a surrogate for <strong>energy distance</strong>.</li>
+<li><strong>Optimal transport</strong> (\(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\)): \(\mathcal{F}\) is a surrogate for <strong>Sinkhorn divergence</strong>, our main choice.</li>
+<li><strong>Laplacian kernel</strong> (\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[-\exp(-\|x-y\|_2)]\)): \(\mathcal{F}\) is a surrogate for <strong>squared MMD</strong>.</li>
+<li><strong>Pairwise distance</strong> (\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\)): \(\mathcal{F}\) is a surrogate for <strong>energy distance</strong>.</li>
 </ul>
 <p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
