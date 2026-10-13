@@ -66,22 +66,10 @@
 </details>
 
 <h2 id="flexibility">Flexibility of both training stages</h2>
-<p>The framework is not tied to one corruption or one distributional loss. What matters is the sequence: learn a related reconstruction capability, then optimize the generated distribution.</p>
-<p><strong>Alternative pretraining.</strong> Replacing 80% of image patches with Gaussian noise and reconstructing the image reaches FID 1.87 after 160 pretraining epochs and 12,500 post-training updates. We also recover clean-image representations from a frozen RAEv2 <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-16" data-scroll="ref-16">[16]</a> encoder and compose the student with its frozen decoder. This variant reaches FID 2.34 after 12,500 post-training updates. The representation-based variant uses a pretrained representation teacher; it is an optional alternative to the main pixel-space recipe.</p>
-<p><strong>Alternative distributional objectives.</strong> Starting from the same perceptually pretrained Priming-B-160 checkpoint, we replace OT with a mean pairwise-distance objective or a negative Laplacian-kernel surrogate. At 25,000 updates, they achieve FIDs of 1.95 and 1.85, respectively, compared with 1.38 for OT. Thus, multiple distributional losses work, with OT yielding the best FID among these choices.</p>
-<p><strong>Alternative feature spaces.</strong> Replacing ResNet-MAE and ConvNeXt with SigLIP, ViT-MAE, and Inception-V3 yields FID 1.65 and FDr⁵ 6.13 after 25,000 updates. The latter score improves on the reference, but these encoders also contribute to FDr⁵, so that improvement is not independent held-out-feature evidence.</p>
-<div class="blog-table" role="region" aria-label="ImageNet training-design alternatives" tabindex="0"><table><caption>ImageNet alternatives reported in the paper</caption><thead><tr><th scope="col">Configuration</th><th scope="col">FID ↓</th><th scope="col">Post-training updates</th></tr></thead><tbody>
-<tr><th scope="row">Priming-B-160, perceptual + OT</th><td>1.38</td><td>25,000</td></tr>
-<tr><th scope="row">Without perceptual loss</th><td>2.07</td><td>25,000</td></tr>
-<tr><th scope="row">Patch masking</th><td>1.87</td><td>12,500</td></tr>
-<tr><th scope="row">RAE representation pretraining</th><td>2.34</td><td>12,500</td></tr>
-<tr><th scope="row">Pairwise-distance objective</th><td>1.95</td><td>25,000</td></tr>
-<tr><th scope="row">Laplacian-kernel surrogate</th><td>1.85</td><td>25,000</td></tr>
-<tr><th scope="row">SigLIP / MAE / Inception features</th><td>1.65</td><td>25,000</td></tr>
-</tbody></table></div>
-<p class="blog-note">Masking and RAE use a shorter post-training horizon; the table demonstrates viable alternatives, not a comparison at identical training budgets.</p>
-<p>The noise level also matters. At a matched 12,500-update budget, our default \(s=0.8\) reaches FID 1.65, while pretraining entirely on pure noise (\(s=1.0\)) reaches 65.08. This supports the intuition that pretraining should retain enough clean-image information for reconstruction while remaining close to the generator’s eventual noise inputs. We also apply FD-loss <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-17" data-scroll="ref-17">[17]</a> as another distributional post-training objective in the paper’s appendix.</p>
-<!-- Figure planned: pretraining and post-training ablations. -->
+<p>We found that the Priming Model framework is quite versatile: it accommodates various choices of pretraining and post-training.</p>
+<p><strong>Alternative pretraining.</strong> Masking also works: simply replacing 80% of image patches with Gaussian noise and reconstructing the image reaches FID 1.87 after 12,500 post-training updates. We also recover clean-image representations from a frozen RAEv2 <a class="blog-citation" href="#/blog/are-we-overthinking-one-step-generation/ref-16" data-scroll="ref-16">[16]</a> encoder and compose the student with its frozen decoder. This variant reaches FID 2.34 after 12,500 post-training updates.</p>
+<p><strong>Alternative distributional objectives.</strong> Starting from the same perceptually pretrained Priming-B-160 checkpoint, we replace OT with a mean pairwise-distance objective or a negative Laplacian-kernel surrogate. At 25,000 updates, they achieve FIDs of 1.95 and 1.85, respectively, compared with 1.38 for OT.</p>
+<p><strong>Alternative feature spaces.</strong> Replacing ResNet-MAE and ConvNeXt with SigLIP, ViT-MAE, and Inception-V3 yields FID 1.65. FDr⁵ also improves to 6.13, but these encoders contribute to FDr⁵, so that improvement is not independent held-out-feature evidence.</p>
 
 <h2 id="results">Results across three domains</h2>
 <h3>ImageNet: class-conditional generation</h3>
