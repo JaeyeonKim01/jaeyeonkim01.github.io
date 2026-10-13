@@ -17,7 +17,7 @@
 <h2 id="priming-models">Priming Models</h2>
 <p>The idea is simple: <strong>reconstruct first, then match distributions.</strong> Before learning the full noise-to-image mapping, we teach the network to recover clean-image structure from corrupted inputs. The same network is then used directly as a one-step generator and refined with a distributional objective.</p>
 <h3>Reconstruction pretraining</h3>
-<p>Let \(\mathbf{x}_0\) be a clean training image and \(\boldsymbol{\epsilon}\) be independent Gaussian noise. Our simplest corruption mixes 20% clean image with 80% noise, and the network predicts the clean image using a squared-error loss:</p>
+<p>Let \(\mathbf{x}_0\) be a clean training image and \(\boldsymbol{\epsilon}\) be independent Gaussian noise. Our simplest corruption mixes 20% clean image with 80% Gaussian noise directly in pixel space, and the network predicts the clean image using a squared-error loss:</p>
 <div class="blog-equation" role="group" aria-label="Fixed-noise reconstruction pretraining">
 \[
 \mathcal{L}_{\mathrm{pre}}(\theta)=\mathbb{E}_{\mathbf{x}_0,\boldsymbol{\epsilon}}\!\left[\left\|f_\theta(\mathbf{x}_{0.8},c)-\mathbf{x}_0\right\|_2^2\right],\qquad \mathbf{x}_{0.8}=0.2\mathbf{x}_0+0.8\boldsymbol{\epsilon}.
