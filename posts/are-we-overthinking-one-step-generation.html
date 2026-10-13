@@ -47,7 +47,6 @@
 <li><strong>Pairwise distance</strong> (<mark class="coloredhl-xxgreen">\(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\)</mark>): \(\mathcal{F}\) is a surrogate for <strong>energy distance</strong>.</li>
 </ul>
 <p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
-<p>The main recipe requires neither a prescribed diffusion trajectory nor a pretrained generative teacher. It does use pretrained feature encoders, whose role is to provide the representation spaces in which we compare distributions.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
 
 <h2 id="pretraining-shapes-posttraining">Pretraining shapes post-training</h2>
