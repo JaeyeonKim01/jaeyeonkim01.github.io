@@ -41,25 +41,15 @@
 </div>
 <p>Here, \(a=\phi_{\#}q_\theta\) and \(b=\phi_{\#}p_{\mathrm{data}}\) denote the distributions of generated and real features, respectively. The notation \(\phi_{\#}\) means the distribution obtained by mapping samples through \(\phi\), and \(\mathrm{sg}\) denotes stop-gradient. The first term attracts generated features toward real features; the second provides a repulsive self-interaction among generated samples.</p>
 <p>Different choices of \(\mathcal{D}\) give different distributional surrogates. Our main choice is an entropy-regularized optimal transport cost, \(\mathcal{D}(a,b)=\mathrm{OT}_{\varepsilon}(a,b)\), yielding a surrogate for Sinkhorn divergence.</p>
-<p>A negative Laplacian-kernel similarity instead yields a surrogate for squared MMD:</p>
-<div class="blog-equation" role="group" aria-label="Negative Laplacian-kernel similarity">
-\[
-\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}\!\left[-\exp\!\left(-\|x-y\|_2\right)\right].
-\]
-</div>
-<p>We find that even the simpler mean pairwise distance is effective in our experiments:</p>
-<div class="blog-equation" role="group" aria-label="Mean pairwise feature distance">
-\[
-\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}\!\left[\|x-y\|_2\right].
-\]
-</div>
+<p>A negative Laplacian-kernel similarity, \(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[-\exp(-\|x-y\|_2)]\), instead yields a surrogate for squared MMD.</p>
+<p>We find that even the simpler mean pairwise distance, \(\mathcal{D}(a,b)=\mathbb{E}_{x\sim a,\,y\sim b}[\|x-y\|_2]\), is effective in our experiments.</p>
 <p>During training, we estimate these objectives using minibatches of generated and real samples and backpropagate through the frozen feature encoder and generator to update the generator parameters.</p>
 <p>The main recipe requires neither a prescribed diffusion trajectory nor a pretrained generative teacher. It does use pretrained feature encoders, whose role is to provide the representation spaces in which we compare distributions.</p>
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
 
 <h2 id="pretraining-shapes-posttraining">Pretraining shapes post-training</h2>
-<p>The pretrained network need not already be a good generator. Its outputs from pure noise are initially poor, yet distributional post-training rapidly turns them into clean images. In the ImageNet training trajectory shown in our main figure, visibly noisy outputs become clean images within 1,250 post-training updates. FID falls sharply early in this stage and continues to improve through 25,000 updates.</p>
-<p>We also compare networks pretrained for 20, 80, and 160 epochs without perceptual loss, together with a network pretrained for 160 epochs with perceptual loss. At matched post-training updates, longer reconstruction pretraining is associated with lower FID, and perceptual pretraining further improves the result. Thus, the useful output of the first stage is an initialization that can be refined efficiently, even if it does not yet produce good samples.</p>
+<p>Reconstruction pretraining makes distributional post-training substantially more efficient, a key factor behind our empirical results. As shown in Figure 1 (right) of our paper, post-training rapidly turns the initially noisy outputs into clean images: Priming-B pretrained for 160 epochs with perceptual loss reaches FID 2.26 after only 1,250 distributional post-training updates, using the online weights.</p>
+<p>In general, longer pretraining also improves the efficiency of post-training. We compare networks pretrained for 20, 80, and 160 epochs without perceptual loss. At matched post-training updates, longer reconstruction pretraining is associated with lower FID. Thus, the useful output of the first stage is an initialization that can be refined efficiently, even if it does not yet produce good samples.</p>
 <!-- Figure planned: main training trajectory and matched pretraining-length curves. -->
 <h3>Why might this happen?</h3>
 <p>We do not claim to have a complete explanation. Our Jacobian analysis probes one possible mechanism: a useful loss gradient does not guarantee that parameter updates can realize a useful change in the generated features.</p>
