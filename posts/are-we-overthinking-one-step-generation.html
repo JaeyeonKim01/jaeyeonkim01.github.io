@@ -49,11 +49,11 @@
 <!-- Figure planned: reconstruction pretraining followed by distributional post-training. -->
 
 <div class="blog-figure-pair" role="group" aria-label="Post-training efficiency and the effect of pretraining duration">
-<figure id="figure-1">
+<figure id="figure-1" tabindex="-1">
 <a href="assets/blog/priming/posttraining-trajectory.png" target="_blank" rel="noopener" aria-label="Open the full-size post-training trajectory figure"><img src="assets/blog/priming/posttraining-trajectory.png" width="1201" height="786" loading="lazy" alt="Priming-B starts with noisy outputs after reconstruction pretraining, then reaches FID 2.26 after 1,250 post-training updates, while Drifting-B improves more gradually with training compute."></a>
 <figcaption><strong>Figure 1. Rapid refinement.</strong> Reconstruction pretraining makes subsequent distributional post-training efficient.</figcaption>
 </figure>
-<figure id="figure-2">
+<figure id="figure-2" tabindex="-1">
 <a href="assets/blog/priming/pretraining-epochs.png" target="_blank" rel="noopener" aria-label="Open the full-size pretraining-duration figure"><img src="assets/blog/priming/pretraining-epochs.png" width="1200" height="834" loading="lazy" alt="Online FID during post-training for 20, 80, and 160 pretraining epochs, plus 160 epochs with perceptual loss. Longer reconstruction pretraining generally yields lower FID at matched post-training updates."></a>
 <figcaption><strong>Figure 2. Longer pretraining helps.</strong> Online FID at matched post-training updates for 20, 80, and 160 epochs, with a perceptual-loss variant.</figcaption>
 </figure>
