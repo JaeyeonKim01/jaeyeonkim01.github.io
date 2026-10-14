@@ -24,9 +24,11 @@ jobs:
           node-version: '22'
       - name: Install dependencies
         run: npm ci
+      - name: Build published blog
+        run: npm run build:blog
       - name: Check JavaScript
         run: npm run check
-      - name: Build public homepage without local blog drafts
+      - name: Build public homepage and blog
         run: npm run build:public
       - name: Install browser test tools
         run: |
@@ -40,7 +42,7 @@ jobs:
             if curl --silent --fail http://127.0.0.1:5173/ > /dev/null; then break; fi
             sleep 1
           done
-          PUBLIC_SITE=1 npm test
+          npm test
       - name: Publish static homepage
         uses: JamesIves/github-pages-deploy-action@v4
         with:

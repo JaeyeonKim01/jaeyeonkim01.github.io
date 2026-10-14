@@ -3,7 +3,4 @@ qa/
 *.log
 .DS_Store
 public-dist/
-posts/
 source-content/
-dist/posts.js
-dist/assets/blog/

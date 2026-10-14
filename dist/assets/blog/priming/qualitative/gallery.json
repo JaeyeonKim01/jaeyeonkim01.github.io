@@ -1,0 +1,3788 @@
+{
+  "imagenet": {
+    "kind": "class",
+    "items": [
+      {
+        "id": 12,
+        "label": "house finch",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0012_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 14,
+        "label": "indigo bunting",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0014_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 17,
+        "label": "jay",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0017_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 21,
+        "label": "kite",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0021_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 22,
+        "label": "bald eagle",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0022_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 24,
+        "label": "great grey owl",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0024_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 84,
+        "label": "peacock",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0084_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 88,
+        "label": "macaw",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0088_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 90,
+        "label": "lorikeet",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0090_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 92,
+        "label": "bee eater",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0092_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 94,
+        "label": "hummingbird",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0094_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 95,
+        "label": "jacamar",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0095_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 96,
+        "label": "toucan",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0096_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 130,
+        "label": "flamingo",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0130_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 145,
+        "label": "king penguin",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0145_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 207,
+        "label": "golden retriever",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0207_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 208,
+        "label": "Labrador retriever",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0208_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 250,
+        "label": "Siberian husky",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0250_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 270,
+        "label": "white wolf",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0270_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 279,
+        "label": "Arctic fox",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0279_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 281,
+        "label": "tabby",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0281_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 283,
+        "label": "Persian cat",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0283_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 285,
+        "label": "Egyptian cat",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0285_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 288,
+        "label": "leopard",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0288_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 291,
+        "label": "lion",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0291_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 292,
+        "label": "tiger",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0292_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 296,
+        "label": "ice bear",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0296_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 340,
+        "label": "zebra",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0340_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 349,
+        "label": "bighorn",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0349_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 360,
+        "label": "otter",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0360_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 386,
+        "label": "African elephant",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0386_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 387,
+        "label": "lesser panda",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0387_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 388,
+        "label": "giant panda",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0388_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 1,
+        "label": "goldfish",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0001_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 31,
+        "label": "tree frog",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0031_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 107,
+        "label": "jellyfish",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0107_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 108,
+        "label": "sea anemone",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0108_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 323,
+        "label": "monarch",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0323_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 973,
+        "label": "coral reef",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0973_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 985,
+        "label": "daisy",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0985_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 992,
+        "label": "agaric",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0992_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 417,
+        "label": "balloon",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0417_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 425,
+        "label": "barn",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0425_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 448,
+        "label": "birdhouse",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0448_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 483,
+        "label": "castle",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0483_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 580,
+        "label": "greenhouse",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0580_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 649,
+        "label": "megalith",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0649_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 698,
+        "label": "palace",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0698_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 718,
+        "label": "pier",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0718_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 755,
+        "label": "radio telescope",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0755_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 780,
+        "label": "schooner",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0780_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 817,
+        "label": "sports car",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0817_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 829,
+        "label": "streetcar",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0829_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 927,
+        "label": "trifle",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0927_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 958,
+        "label": "hay",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0958_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 970,
+        "label": "alp",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0970_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 974,
+        "label": "geyser",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0974_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 975,
+        "label": "lakeside",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0975_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 979,
+        "label": "valley",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0979_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 980,
+        "label": "volcano",
+        "series": {
+          "l160_production_ema": {
+            "label": "Priming-L-160",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_00.png",
+                "index": 0
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_01.png",
+                "index": 1
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_02.png",
+                "index": 2
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_03.png",
+                "index": 3
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_04.png",
+                "index": 4
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_05.png",
+                "index": 5
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_06.png",
+                "index": 6
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_07.png",
+                "index": 7
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_08.png",
+                "index": 8
+              },
+              {
+                "src": "assets/blog/priming/qualitative/imagenet/l160_production_ema/class_0980_noise_09.png",
+                "index": 9
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "description": ""
+  },
+  "t2i": {
+    "kind": "prompt",
+    "items": [
+      {
+        "id": 2,
+        "label": "A young botanist in a sunlit greenhouse, holding a tray of tiny seedlings, natural editorial photograph.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_002_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 6,
+        "label": "A street musician playing a golden saxophone beneath a red awning on a rainy evening.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_006_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 4,
+        "label": "A pastry chef dusted with flour presenting a perfect raspberry tart in a quiet bakery kitchen.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_004_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 7,
+        "label": "A joyful ceramic artist holding a freshly glazed turquoise vase in a bright workshop.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_007_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 8,
+        "label": "A mountain guide wearing an orange jacket and round snow goggles, dramatic snowy peaks in the background.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_008_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 10,
+        "label": "A fashionable woman in a white suit and wide-brimmed hat standing against a cobalt blue wall, magazine portrait.",
+        "category": "portrait_and_character",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_010_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 11,
+        "label": "A red panda wearing a bright blue baseball cap, sitting on a moss-covered log.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_011_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 13,
+        "label": "A curious baby elephant spraying water beside its mother at a sunlit watering hole.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_013_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 14,
+        "label": "Two emperor penguins standing together beneath a green aurora on an Antarctic ice field.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_014_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 15,
+        "label": "A tiny tree frog resting on a glossy leaf covered with morning raindrops, macro photograph.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_015_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 16,
+        "label": "A barn owl gliding silently through an old library filled with floating dust motes.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_016_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 17,
+        "label": "A fluffy white alpaca peeking over a wooden fence in a field of purple lupines.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_017_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 18,
+        "label": "A sea turtle swimming above a colorful coral reef with shafts of sunlight in clear water.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_018_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 19,
+        "label": "A fox curled asleep inside a hollow tree while gentle snow falls outside.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_019_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 20,
+        "label": "Three playful otters floating on their backs in calm blue water, each holding a small seashell.",
+        "category": "animals",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_020_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 21,
+        "label": "A polished glass teapot filled with yellow wildflowers on a rustic wooden table, soft morning light.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_021_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 22,
+        "label": "A plate of blueberry pancakes topped with strawberries and maple syrup, inviting food photography.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_022_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 23,
+        "label": "A transparent perfume bottle on black stone surrounded by jasmine petals and silver reflections, luxury product photo.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_023_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 24,
+        "label": "A bowl of ramen with a soft-boiled egg, mushrooms, scallions, and rising steam on a dark wooden counter.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_024_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 29,
+        "label": "An antique silver pocket watch resting on an open handwritten letter with a sprig of lavender.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_029_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 28,
+        "label": "A delicate matcha parfait layered with cream and red beans in a tall glass, Japanese cafe photography.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_028_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 27,
+        "label": "A pair of red running shoes splashing through a shallow puddle, crisp commercial product photograph.",
+        "category": "still_life_food_product",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_027_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 32,
+        "label": "A misty waterfall descending through a lush Icelandic canyon at sunrise, ultra-wide landscape photograph.",
+        "category": "nature_landscape",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_032_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 34,
+        "label": "A winding river reflecting golden autumn trees in a quiet mountain valley, aerial view.",
+        "category": "nature_landscape",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_034_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 36,
+        "label": "A lone acacia tree silhouetted against a fiery orange sunset on the African savanna.",
+        "category": "nature_landscape",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_036_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 38,
+        "label": "A crystal-clear alpine lake reflecting snowcapped mountains and a single red canoe.",
+        "category": "nature_landscape",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_038_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 100,
+        "label": "A premium toy-like 3D render of a tiny orange camper van beside a teal lake and rounded mountains.",
+        "category": "graphic_and_3d",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_100_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 96,
+        "label": "A cozy low-poly campsite with a green tent, pine trees, and a glowing fire beneath a purple night sky.",
+        "category": "graphic_and_3d",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_096_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 91,
+        "label": "An isometric miniature city powered by wind turbines and rooftop gardens, clean 3D render.",
+        "category": "graphic_and_3d",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_091_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 89,
+        "label": "A vintage travel-poster illustration of a red cable car climbing through the Swiss Alps.",
+        "category": "traditional_art",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_089_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 90,
+        "label": "A charcoal drawing of two jazz musicians performing in a smoky basement club.",
+        "category": "traditional_art",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_090_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 87,
+        "label": "A stained-glass window depicting a peacock beneath flowering vines, jewel-toned light.",
+        "category": "traditional_art",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_087_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 85,
+        "label": "A richly textured pastel drawing of peaches and wildflowers on a checkered tablecloth.",
+        "category": "traditional_art",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_085_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 81,
+        "label": "A watercolor illustration of a lighthouse standing against enormous storm waves.",
+        "category": "traditional_art",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_081_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 77,
+        "label": "A mechanical hummingbird with brass wings hovering beside a luminous orchid.",
+        "category": "fantasy_scifi",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_077_sample_00.png",
+                "index": 0
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 0
+      },
+      {
+        "id": 62,
+        "label": "Three ceramic owls lined up on a bookshelf, each wearing a different colored scarf.",
+        "category": "spatial_composition",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_062_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 61,
+        "label": "A small red cube to the left of a large blue sphere on a clean white studio floor.",
+        "category": "spatial_composition",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_061_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 66,
+        "label": "Two sailboats on a calm lake, the orange boat closer to the viewer and the blue boat near the mountains.",
+        "category": "spatial_composition",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_066_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 60,
+        "label": "A firefighter rescuing a small dog from a flooded street during heavy rain, documentary photograph.",
+        "category": "action_documentary",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_060_sample_02.png",
+                "index": 2
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 2
+      },
+      {
+        "id": 53,
+        "label": "A surfer carving through a translucent turquoise wave at golden hour, water droplets frozen in motion.",
+        "category": "action_documentary",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_053_sample_03.png",
+                "index": 3
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 3
+      },
+      {
+        "id": 46,
+        "label": "A tiny cabin with warm windows nestled among snow-covered pine trees at blue hour.",
+        "category": "architecture_interior",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_046_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      },
+      {
+        "id": 43,
+        "label": "A narrow street in Kyoto after rain, glowing paper lanterns reflected on wet pavement, cinematic photograph.",
+        "category": "architecture_interior",
+        "series": {
+          "priming": {
+            "label": "Priming",
+            "samples": [
+              {
+                "src": "assets/blog/priming/qualitative/t2i/prompt_043_sample_01.png",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "paper_sample_index": 1
+      }
+    ],
+    "description": ""
+  }
+}

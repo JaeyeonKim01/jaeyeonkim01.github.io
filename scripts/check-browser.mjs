@@ -4,8 +4,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:5173';
-const publicSite = process.env.PUBLIC_SITE === '1';
-const secondaryRoutes = publicSite ? ['collaboration', 'cv'] : ['collaboration', 'blog', 'cv'];
+const secondaryRoutes = ['collaboration', 'blog', 'cv'];
 const executablePath = process.env.CHROMIUM_PATH || (existsSync('/usr/bin/chromium-browser') ? '/usr/bin/chromium-browser' : undefined);
 const browser = await chromium.launch({executablePath, headless:true, args:['--no-sandbox','--disable-dev-shm-usage']});
 await mkdir(new URL('../qa/',import.meta.url),{recursive:true});
@@ -150,7 +149,6 @@ try {
   await noOverflow('Small mobile background');
   checks.push('Background is visible as one paragraph with Chanwoo Park link');
   checks.push('Former About link redirects home; background is preserved on the homepage');
-  if (!publicSite) {
   await page.locator('#main-nav a[data-route="blog"]').click();
   await page.locator('main[data-page="blog"]').waitFor();
   await page.getByRole('link',{name:'Are We Overthinking One-Step Generation?',exact:true}).click();
@@ -169,13 +167,6 @@ try {
   await page.getByRole('link',{name:'Back to Blog',exact:true}).click();
   await page.locator('.blog-list').waitFor();
   checks.push('Blog list, full post, native math, narrow-screen layout, contents links, reload, and missing-post recovery');
-  } else {
-    assert.equal(await page.locator('#main-nav a[data-route="blog"]').count(), 0);
-    await page.goto(`${base}/#/blog/are-we-overthinking-one-step-generation`, {waitUntil:'networkidle'});
-    assert.equal(await page.locator('h1').innerText(), 'Page not found.');
-    assert.equal(await page.locator('script[src="posts.js"]').count(), 0);
-    checks.push('Public homepage excludes the blog navigation, post, and script');
-  }
   await page.goto(`${base}/#/research`,{waitUntil:'networkidle'});
   const ownNames = page.locator('.authors strong[title^="Jaeyeon Kim"]');
   assert.equal(await ownNames.count(),18);
