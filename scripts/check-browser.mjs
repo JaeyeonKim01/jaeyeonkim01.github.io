@@ -26,10 +26,10 @@ try {
   assert.equal(firstCards[0].y,firstCards[1].y);
   assert(firstCards[1].x > firstCards[0].x);
   assert.equal(await page.locator('[data-paper-id="park2026overthinking"] .paper-visual img').getAttribute('src'),'assets/papers/priming_teaser.gif');
-  assert.equal(await page.locator('[data-paper-id="park2026overthinking"] .paper-visual').getAttribute('href'),'https://github.com/JaeyeonKim01/priming');
-  checks.push('Desktop publications have two columns; priming teaser links to Code');
+  assert.equal(await page.locator('[data-paper-id="park2026overthinking"] .paper-visual').getAttribute('href'),'https://arxiv.org/abs/2610.20331');
+  checks.push('Desktop publications have two columns; priming teaser links to arXiv');
   assert.equal(await page.locator('.paper-row').count(),6);
-  assert.equal(await page.locator('.news-list li').count(),5);
+  assert.equal(await page.locator('.news-list li').count(),6);
   assert(await page.locator('.portrait').evaluate(image => image.complete && image.naturalWidth > 0));
   const sections = page.locator('.research-section, .updates, .background-section');
   const boxes = await sections.evaluateAll(items => items.map(item => ({top:item.getBoundingClientRect().top,bottom:item.getBoundingClientRect().bottom})));
@@ -54,12 +54,12 @@ try {
   const priming = page.locator('[data-paper-id="park2026overthinking"]');
   assert.match(await priming.locator('.authors').innerText(), /W\. Park\*, J\. Kim\*, Y\. Du, S\. Chen, B\. Han/);
   assert.equal(await priming.getByRole('link',{name:'Code',exact:true}).getAttribute('href'),'https://github.com/JaeyeonKim01/priming');
-  assert.equal(await priming.locator('h3 a').count(),0);
-  assert.equal(await priming.getByRole('link',{name:'Paper',exact:true}).count(),0);
-  checks.push('One-Step Generation has the supplied authors, Code link, and no placeholder paper link');
+  assert.equal(await priming.locator('h3 a').getAttribute('href'),'https://arxiv.org/abs/2610.20331');
+  assert.equal(await priming.getByRole('link',{name:'Paper',exact:true}).getAttribute('href'),'https://arxiv.org/abs/2610.20331');
+  checks.push('One-Step Generation has the supplied authors, Code and arXiv links');
   await noOverflow('Desktop home');
   await screenshot('home-desktop');
-  checks.push('Home: profile, six selected publications, five news items, portrait');
+  checks.push('Home: profile, six selected publications, six news items, portrait');
 
   await page.locator('#main-nav a[data-route="research"]').click();
   await page.locator('main[data-page="research"]').waitFor();
@@ -151,7 +151,7 @@ try {
   checks.push('Former About link redirects home; background is preserved on the homepage');
   await page.locator('#main-nav a[data-route="blog"]').click();
   await page.locator('main[data-page="blog"]').waitFor();
-  await page.getByRole('link',{name:'Are We Overthinking One-Step Generation?',exact:true}).click();
+  await page.locator('.blog-list').getByRole('link',{name:'Are We Overthinking One-Step Generation?',exact:true}).click();
   await page.locator('.blog-body').waitFor();
   assert.equal(await page.locator('h1').innerText(),'Are We Overthinking One-Step Generation?');
   assert(await page.locator('.blog-body math').count() > 0);
